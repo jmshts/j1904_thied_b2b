@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://www.51tuodao.com/uc/depository/uc_set -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script id="_1568206973469_4349" src="./images/detect.json"></script>
+    <title>拓道金服-专注汽车抵押借贷服务的互联网金融平台</title>
+    <meta name="renderer" content="webkit">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="https://www.51tuodao.com/static_pro/depository/images/favicon.ico">
+    <link rel="stylesheet" href="./css/base3.1.css">
+    <link rel="stylesheet" href="./css/uc.css">
+    <script type="text/javascript" async="" src="./js/fm.js"></script>
+    <script src="./js/jquery-1.9.1.min.js"></script>
+    <script src="./js/layer.js"></script>
+<!--    <link rel="stylesheet" href="./css/layer.css" id="layui_layer_skinlayercss" style="">-->
+
+
+    <style></style></head>
+
+<body style="font: 16px/1.3 tahoma,arial,&#39;微软雅黑&#39;;">
+<div>
+    <div class="top">
+        <div class="w1100">
+            <div class="l"><i class="iconfont"></i><b>欢迎致电：</b><span>400-85-666-85</span>
+                <span class="zhiCustomBtn">
+	             	<a href="javascript:void(0)" class="QQ"></a>
+             </span>
+                <a href="https://www.51tuodao.com/uc/depository/uc_set" class="weixin"></a>
+                <a href="http://weibo.com/51tuodao" class="weibo"></a>
+                <div class="weixin_ercode"></div>
+            </div>
+            <ul class="r" id="top_userinfo"><li><a href="https://www.51tuodao.com/uc">177****8215</a><a href="javascript:;" id="exit">退出</a></li>
+                <li><a href="https://www.51tuodao.com/front/novice/index">新手指南</a>|</li>
+                <li><a href="https://www.51tuodao.com/front/newhelp">帮助中心</a>|</li>
+                <li><a href="https://www.51tuodao.com/column/new_law">出借人教育</a>|</li>
+                <li class="header_app"><a href="https://www.51tuodao.com/front/app/appDownLoad" target="_blank" class="no_mr"><img src="./images3.1/header_app.png"></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <div class="w1100 clear">
+            <div class="logo fl">
+                <div class="pic"><a href="https://www.51tuodao.com/"><img src="./images3.1/logo.png"></a></div>
+                <div class="slogan">
+                    <a href="https://www.51tuodao.com/">
+                        <img src="./images3.1/biaoyu_new.png" id="slogan_img">
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav_nm fr">
+                <ul class="title4Ul">
+                    <li class="title4Main"><a class="tt" href="/main">首页</a></li>
+                    <li class="title4Manage"><a class="tt" href="/bnulkmark">散标区</a></li>
+                    <li class="title4Transfer"><a class="tt" href="/transfer">转让区</a></li>
+                    <li class="title4Saves"><a class="tt" href="/information">信息披露</a></li>
+                    <li class="title4About"><a class="tt" href="/credit" target="_blank">我要加盟</a></li>
+                    <li class="title4Personal uc_ent1 on"><a href="/usermanager" class="uca on" id="hh88">我的账户</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <script src="./js/base.js"></script>
+    <script src="./js/base3.1.js"></script>
+    <script src="./js/layer.js"></script>
+    <script>
+        $(function(){
+            $("#exit").click(function(){
+                layer.load(0);
+                $.ajax({
+                    url:'/login/logout',
+                    type:'post',
+                    dataType:'json',
+                    success:function(data){
+                        if(true == data.result){
+                            var src = getUrlSrc(data.logout);
+                            if(src != null &&　src != undefined && src.length > 0) {
+                                $.getScript(src[0]).done(function() {
+                                    window.location.href="/front/login";
+                                });
+                            } else {
+                                window.location.href="/front/login";
+                            }
+                        }/*else{
+                            layer.alert("系统繁忙，请稍后重试...",{icon:7});
+                        }*/
+                    },
+                    /* error:function(){
+                         layer.closeAll(0);
+                         layer.alert("系统繁忙，请稍后重试...",{icon:7});
+                     }*/
+                });
+            });
+            var now = new Date().getTime() / 1000;
+            if(now >= 1485100800 && now <= 1487001600) {
+                $('#slogan_img').attr('src', '/images3.1/springIndex.gif');
+            } else {
+                $('#slogan_img').attr('src', '/images3.1/biaoyu_new.png');
+            }
+        });
+        function getUrlSrc(htmlstr){
+            var reg=/<script.+?src=('|")?([^'"]+)('|")?(?:\s+|>)/gim;
+            var arr = [];
+            while(tem=reg.exec(htmlstr)){
+                arr.push(tem[2]);
+            }
+            return arr;
+        }
+    </script></div>
+<div class="w1100 clear">
+    <div>
+        <div class="uc_menu">
+            <div class="menu_top">
+                <div class="head_portrait">
+                    <div class="uc_icon">
+                        <div class="user_bg"></div>
+                        <img id="headPic" src="./images3.1/default_pic_78.png" class="user_icon">
+                        <div class="edit_icon dis_none">编辑头像</div>
+                    </div>
+                    <!-- <div class="news_num">
+                        <span class="fl jt"></span><span class="fl c">你有99条新消息..</span>
+                    </div> -->
+                </div>
+                <p class="fz">您好！17765868215</p>
+                <div class="safe">
+                    <!-- <span class="level">安全等级&nbsp;&nbsp;<i>中</i></span> -->
+                    <ul class="factor">
+                        <a href="https://www.51tuodao.com/front/depository/person_bank_open?returnUrl=/uc/depository/uc_set" id="cunguanLink">
+                            <li class="cunguan"><!--已开通存管  点亮加 on-->
+                                <div class="tips dis_none">
+                                    <span class="fl jt"></span><span class="fl c" id="cunguanStatus">未开通存管</span><!--已开通存管-->
+                                </div>
+                            </li>
+                        </a>
+                        <a href="https://www.51tuodao.com/front/vip/level_detail">
+                            <li class="vip0" id="vipClass">
+                                <div class="tips dis_none">
+                                    <span class="fl jt"></span><span class="fl c" id="vipStatus">VIP等级：0</span>
+                                </div>
+                            </li>
+                        </a>
+                        <a href="https://www.51tuodao.com/uc/depository/uc_news">
+                            <li class="xx_info">
+                                <span class="iconfont"></span>
+                                <div class="tips">
+                                    <span class="fl jt"></span><span class="fl c">消息</span>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu_main">
+                <ul id="menu_uc">
+                    <li class="uc"><a href="/usermanager"><i></i>账户总览</a></li>
+                    <li class="uc_invest uc_invest_details invest_details"><a href="/myborrow"><i></i>我的出借</a></li>
+                    <li class="uc_bond"><a href="/transfer"><i></i>我的转让</a></li>
+                    <li class="uc_bankroll"><a href="/myfundrecord"><i></i>资金记录</a></li>
+                    <li class="uc_set"><a href="/myaccountfunds"><i></i>账户资金</a></li>
+                    <li class="uc_set "><a href="/myaccountsettings" class="on"><i></i>账户设置</a></li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            var page = "uc_set";
+            if(page != ""){
+                $("." + page + " a").addClass("on");
+            }else{
+                $(".uc").addClass("on");
+            }
+
+            function nofind(){
+                $('#headPic').attr("src", "/images3.1/default_pic_78.png");
+                $('#headPic').removeAttr("onerror", null);
+            }
+            $('.menu_top .uc_icon').hover(
+                function(){
+                    $('.menu_top .uc_icon .edit_icon').fadeIn(300);
+                    $('.menu_top .uc_icon .edit_icon').attr('id','abc')
+                },
+                function(){
+                    $('.menu_top .uc_icon .edit_icon').fadeOut(300);
+                    $('.menu_top .uc_icon .edit_icon').removeAttr('id');
+                }
+            );
+            $('.menu_top .uc_icon').click(
+                function(){
+                    window.location.href = "/uc/depository/uc_set?act=eidtPic";
+                }
+            );
+
+            $(function(){
+                $('.safe li').hover(
+
+                    function(){
+                        $(this).find('.tips').show();
+                    },
+
+                    function(){
+                        $(this).find('.tips').hide();
+                    });
+
+                uc_left();
+            });
+
+            function uc_left(){
+                $.ajax({
+                    url: "/json/uc/userInfo?t="+new Date(),
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json",
+                    success:function(data) {
+                        if(data.result) {
+                            if(data.phoneStatus == 1){
+                                $(".phone").addClass("on");
+                                $("#phoneStatus").text("已绑定手机");
+                            }else{
+                                $(".phone").removeClass("on");
+                                $("#phoneStatus").text("未绑定手机");
+                            }
+                            if(data.realnameStatus == 1){
+                                $(".sfz").addClass("on");
+                                $("#realNameStatus").text("已实名认证");
+                            }else{
+                                $(".sfz").removeClass("on");
+                                $("#realNameStatus").text("未实名认证");
+                            }
+                            if(data.voucherTip == 1){
+                                $("#voucherTip_all").hide();
+                            }else{
+                                $("#voucherTip_all").show();
+                            }
+                            if(data.pointsTip == 1){
+                                $("#pointsTip_all").hide();
+                            }else{
+                                $("#pointsTip_all").show();
+                            }
+
+                            $("#vipStatus").text("VIP等级："+ data.vipstatus);
+                            $("#vipClass").addClass("vip"+ data.vipstatus);
+
+                            if(data.cunguanStatus === 1){
+                                $(".cunguan").addClass("on");
+                                $("#cunguanStatus").text("已开通存管");
+                                $("#cunguanLink").attr("href","/uc/depository/uc_set");
+                            }else if(data.cunguanStatus === 0){
+                                $(".cunguan").removeClass("on");
+                                $("#cunguanStatus").text("存管激活中");
+                                $("#cunguanLink").attr("href","/front/depository/person_bank_open");
+                            }else{
+                                $(".cunguan").removeClass("on");
+                                $("#cunguanStatus").text("未开通存管");
+                                $("#cunguanLink").attr("href","/front/depository/person_bank_open?returnUrl=/uc/depository/uc_set");
+                            }
+
+                            /*if(data.isOldUser == 1){
+                                $("#dOldUser").show();
+                            }else{
+                                $("#dOldUser").hide();
+                            }*/
+                        }
+                    },
+                    error:function(data) {
+                    }
+                });
+            }
+        </script>
+    </div>
+
+    <script src="./js/uaredirect.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./css/jcrop.css">
+    <style type="text/css">
+        ._citys {
+            width:318px;
+            height:186px;
+            display: inline-block;
+            position: relative;
+            background:#fff;
+            top: -10px;
+            margin-left: 185px
+        }
+        ._citys span { color: #56b4f8; height: 15px; width: 15px; line-height: 15px; text-align: center; border-radius: 3px; position: absolute; right: 1em; top: 10px; border: 1px solid #56b4f8; cursor: pointer; }
+        ._citys0 { width: 100%; height: 30px; border: 1px solid #EBEBEB; padding: 0; margin: 0; border-bottom: 0}
+        ._citys0 li { float:left; height:30px;line-height: 30px;overflow:hidden; font-size: 14px; color: #999; width: 106px; text-align: center; cursor: pointer; margin:0!important;background: #F2F2F2}
+        .citySel { background: #fff!important; color: #333 !important; }
+        ._citys1 { width: 100%;height:156px; display: inline-block; padding: 0; overflow: auto;background:#fff;border: 1px solid #EBEBEB}
+        ._citys1 a {
+            /* height: 35px;  */
+            display: block;
+            color: #333;
+            cursor: pointer;
+            font-size: 13px;
+            overflow: hidden;
+            padding: 7px 0 8px 10px
+        }
+        ._citys1 a:hover { color: #999; background-color: #fff; }
+        .ui-content{border: 1px solid #EDEDED;}
+    </style>
+    <script type="text/javascript">
+        function getJsUrlParamString(){
+            var str = window.location.href;
+            var parastr = str.split("?")[1];
+            if(parastr == undefined) {
+                return "";
+            } else {
+                return "?" + parastr;
+            }
+        }
+        uaredirect("/html5/uc/uc_member"+getJsUrlParamString());
+
+        var second = (Math.floor(Math.random()*10000) % 9+1).toString();
+        for(var i=0;i<8;i++)
+        {
+            second = second + (Math.floor(Math.random()*10000) % 10).toString();
+        }
+        (function() {
+            _fmOpt = {
+                partner: 'zjtuodao',
+                appName: 'zjtuodao_web',
+                token: second        };
+            var cimg = new Image(1,1);
+            cimg.onload = function() {
+                _fmOpt.imgLoaded = true;
+            };
+            cimg.src = "https://fp.fraudmetrix.cn/fp/clear.png?partnerCode=zjtuodao&appName=zjtuodao_web&tokenId=" + _fmOpt.token;
+            var fm = document.createElement('script'); fm.type = 'text/javascript'; fm.async = true;
+            fm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'static.fraudmetrix.cn/fm.js?ver=0.1&t=' + (new Date().getTime()/3600000).toFixed(0);
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fm, s);
+        })();
+    </script>
+    <div class="uc_right user_set_main">
+        <div class="cat_title"><div class="w">基本信息</div></div>
+        <div class="user_total clear">
+            <div class="w">
+                <div class="member">
+                    <div class="user_icon" id="user_icon" style="cursor: pointer;">
+                        <div class="icon"><img src="./images3.1/default_pic_98.png" onerror="this.src=&#39;//www.51tuodao.com/static_pro/pc2.0/images/default_pic_98.png&#39;" width="106px"></div>
+                        <div class="edit">点击更换头像</div>
+                    </div>
+                    <div class="font">
+                        <p class="name">Hi~&nbsp;&nbsp;17765868215</p>
+                        <p class="vipImg">
+                            <img class="vips" id="vipImg" src="./images3.1/v0.png" alt="">
+                            <a href="https://www.51tuodao.com/front/vip/level_detail">查看特权</a>
+                            <span id="freeTimes">本月剩余免费提现次数0次</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cat_title clear"><div class="w">修改资料</div></div>
+        <div class="w" id="window">
+            <form action="userinfosetting">
+            <div class="set_section">
+
+                <dl class="clear" id="gocg">
+                    <dd class="title">身份认证</dd>
+
+                    <!--还未开通，点击跳转开通存管账户页-->
+                    <dd class="note">您还未通过实名认证</dd>
+                    <dd class="link"><a href="/verified">立即激活</a></dd>
+
+                </dl>
+
+                <dl class="clear">
+                    <dd class="title">手机认证</dd>
+                    <dd class="note" id="phoneExp">您已通过拓道金服手机认证</dd>
+                    <dd class="link important"><a href="javascript:" id="phone_link">已认证</a></dd>
+                </dl>
+                <dl class="clear" id="card2">
+                    <dd class="title">我的银行卡</dd>
+                    <dd class="note">充值、提现唯一银行卡</dd>
+                    <dd class="link"><a href="/bankcard">立即激活</a></dd>
+                </dl>
+                <dl class="clear" id="">
+                    <dd class="title">邮箱验证</dd>
+                    <dd class="note">绑定邮箱增加账号的安全性</dd>
+
+                    <dd class="link"><a href="/email">立即绑定</a></dd>
+                </dl>
+
+
+                <dl class="clear">
+                    <dd class="title">风险承受能力测评</dd>
+                    <dd class="note" id="evaMsg">您还未进行测评，请点击开始测评</dd>
+                    <dd class="link" id="eva"><a href="https://www.51tuodao.com/front/evaluation/index" id="eva_a">未测评</a></dd>
+                </dl>
+
+
+            </div>
+            <div class="set_section">
+                <dd class="title">基本个人信息</dd>
+                <dl class="clear">
+                    <dd class="title">真实姓名</dd>
+                    <dd class="note">修改拓道金服的登录密码</dd>
+                </dl>
+                <dl class="clear" id="modPayPwd_div">
+                    <dd class="title">性别</dd>
+                    <dd class="note">您还未设置交易密码</dd>
+                </dl>
+                <dl class="clear" id="modPayPwd_div">
+                    <dd class="title">出生日期</dd>
+                    <dd class="note">您还未设置交易密码</dd>
+                </dl>
+                <dl class="clear">
+                    <dd class="title">籍贯</dd>
+                    <dd class="note">修改活动实物的收货地址</dd>
+                </dl>
+                <dl class="clear">
+                    <dd class="title">婚姻状况</dd>
+                    <dd class="note">修改活动实物的收货地址</dd>
+                </dl>
+                <dl class="clear">
+                    <dd class="title">月收入</dd>
+                    <dd class="note">修改活动实物的收货地址</dd>
+                </dl>
+                <dd class="link"><button class="link" type="submit" >修改</button></dd>
+
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="show_window realname dis_none" id="realname_show">
+        <form id="realname_form" name="realname_form">
+            <div class="err">&nbsp;</div>
+            <ul class="form_list">
+                <li><span>真实姓名</span><input type="text" id="rname" maxlength="10"></li>
+                <li><span>身份证号</span><input type="text" class="w242" id="sfz" maxlength="20"></li>
+            </ul>
+            <div class="btns">
+                <input type="button" value="确认" class="confirm" onclick="approveRealname();"><input type="reset" value="取消" class="reset">
+            </div>
+            <div class="ps">
+                <p><i class="iconfont"></i>温馨提示</p>
+                <ol>
+                    <li>实名认证成功后将无法修改。</li>
+                </ol>
+            </div>
+            <input type="hidden" value="194857" name="userId" id="curUserId">
+        </form>
+
+
+        <div class="auth dis_none">
+            <p><i class="iconfont"></i>您已通过拓道金服实名认证</p>
+            <ul class="form_list">
+                <li><b>真实姓名</b><span id="real_name"></span></li>
+                <li><b>身份证号</b><span id="real_idcard"></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="show_window phone_auth dis_none" id="phone_show">
+        <form id="phone_form">
+            <div class="err">&nbsp;</div>
+            <ul class="form_list">
+                <li><span>手机号码</span><input type="text" id="phone" maxlength="11" onkeyup="value=value.replace(/[^0-9]/g,&#39;&#39;)"><input type="button" id="ajax_phone_get" value="获取验证码" class="get_code"></li>
+                <li><span>手机验证码</span><input type="text" class="w70" id="ajax_phone_code" maxlength="6" onkeyup="value=value.replace(/[^0-9]/g,&#39;&#39;)"></li>
+            </ul>
+            <div class="btns">
+                <input type="button" value="确认" class="confirm" onclick="approvePhone();"><input type="reset" value="取消" class="reset">
+            </div>
+        </form>
+
+        <div class="auth dis_none">
+            <p><i class="iconfont"></i>您已通过拓道金服手机认证</p>
+            <ul>
+                <li><b>手机号码</b><span id="sms_phone">17765868215</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="show_window modphone dis_none" id="modphone_show">
+        <form action="https://www.51tuodao.com/uc/depository/uc_set">
+            <div style="width: 0px;height: 0px; position: absolute; left: -10000px; top: -10000px">
+                <input type="text">
+                <input type="password">
+            </div>
+            <div class="err">&nbsp;</div>
+            <ul class="form_list">
+                <li><span>原手机号码</span><b id="sms_phone_2">17765868215</b><input type="button" id="step_btn1" value="获取验证码" class="get_code"></li>
+                <li><span>验证码</span><input type="text" autocomplete="off" class="w242" id="src_yzm" maxlength="6" onkeyup="this.value=this.value.replace(/\D/g,&#39;&#39;)" onafterpaste="this.value=this.value.replace(/\D/g,&#39;&#39;)"></li>
+                <li><span>交易密码</span><input type="password" autocomplete="off" class="w242" maxlength="20" name="payPwd" id="paypwd"></li>
+            </ul>
+            <div class="btns">
+                <input type="button" value="下一步" class="next_step" id="s1">
+            </div>
+        </form>
+    </div>
+
+
+
+    <div class="show_window modphone dis_none" id="modPickUpAddress_show">
+        <form class="" action="https://www.51tuodao.com/uc/depository/uc_set" id="addressee">
+            <div class="err">&nbsp;</div>
+            <ul class="huo_list" id="form_list_ul">
+                <li><span>收货人</span><b></b><input name="pickupName" id="pickup_name" type="text" autocomplete="off" class="w242" placeholder="请填写收货人姓名"></li>
+                <li><span>手机号码</span><input name="pickupPhone" id="pickup_phone" type="text" autocomplete="off" class="w242" maxlength="11" onkeyup="this.value=this.value.replace(/\D/g,&#39;&#39;)" onafterpaste="this.value=this.value.replace(/\D/g,&#39;&#39;)" placeholder="请填写收货人手机号"></li>
+                <li>
+                    <div data-role="page" id="test">
+
+                        <dl data-role="listview">
+                            <dd>
+                                <span>地址信息</span>
+                                <!-- <input name="pickupName" id="city" type="text" autocomplete="off" class="box" placeholder="请选择省/市/区"> -->
+                                <b id="city" class="box">请选择省/市/区</b>
+                                <p id="showCity" class="showCity"></p>
+                            </dd>
+                        </dl>
+
+                        <script type="text/javascript">
+                            $("#city").click(function (e) {
+                                SelCity(this,e);
+                                // console.log(this);
+                            });
+                        </script>
+                    </div>
+                </li>
+                <li><span class="nimei">详细地址</span>
+                    <textarea name="pickupAddress" id="pickup_address" type="text" autocomplete="off" placeholder="详细地址(例：街道/小区/门牌号)"></textarea>
+                    <!-- <input name="pickupAddress" id="pickup_address" type="text" autocomplete="off" class="w242">--></li>
+            </ul>
+            <div class="btns">
+                <input type="button" id="pickupcomfirm" value="确认修改" class="confirm">
+            </div>
+        </form>
+    </div>
+
+
+
+    <div class="show_window modphone dis_none" id="modloginpwd_show">
+        <form id="modpwd_login" autocomplete="off">
+            <div class="err">&nbsp;</div>
+            <ul class="form_list mod_pwd">
+                <li><span>原登录密码</span><input type="password" id="src_pwd_login" autocomplete="off"><a href="https://www.51tuodao.com/front/getPwd" target="_blank" class="forget">忘记密码？</a></li>
+                <li>
+                    <span class="fl">新登录密码</span><input type="password" class="fl" id="new_pwd_login">
+                    <div class="pwd_strong clear">
+                        <p>密码强度</p>
+                        <p class="level_strong">
+                            <b class="ruo"></b>
+                            <b class="middle"></b>
+                            <b class="strong"></b>
+                        </p>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="pwd_ps">建议密码由大小写字母，数字和特殊符号组成。</div>
+                </li>
+                <li class="sure_pwd"><span>确认新登录密码</span><input type="password" id="sure_pwd_login"></li>
+            </ul>
+            <div class="btns">
+                <input type="button" value="确认" class="confirm" onclick="updatePwd();"><input type="reset" value="取消" class="reset">
+            </div>
+            <div class="ps">
+                <p><i class="iconfont"></i>温馨提示</p>
+                <ol>
+                    <li>建议密码请不要太简单，设成复杂一点，最好字母+特殊符号。</li>
+                    <li>我们将严格对用户的所有资料进行保密。</li>
+                </ol>
+            </div>
+        </form>
+    </div>
+
+    <!--编辑-->
+    <div>
+        <div id="user_photo" class="dis_none">
+            <div class="choose_pic">
+                <form enctype="multipart/form-data" id="uploadForm">
+                    <input type="file" name="file" id="choose_file" accept="image/*">
+                    <input type="hidden" name="userId" value="194857">
+                    <div class="choose_btn">
+                        <label for="choose_file"><i class="iconfont"></i>选择图片</label>
+                        <span>图片文件请不要小于200 * 200 像素，<br>不要大于512KB</span>
+                    </div>
+                </form>
+            </div>
+            <div class="head_main">
+                <div class="rel">
+                    <div class="fl">
+                        <img id="xuwanting" src="./images3.1/aa.png" width="320" class="dis_none">
+                    </div>
+                    <div class="preview">
+                        <p class="fz">预览</p>
+                        <div id="preview_box" class="crop_preview"><img id="crop_preview" src="./images3.1/aa.png" width="110"></div>
+                        <p class="px">110*110</p>
+                        <div id="preview_box2" class="crop_preview2"><img id="crop_preview2" src="./images3.1/aa.png" width="80"></div>
+                        <p class="px">80*80</p>
+                    </div>
+                </div>
+            </div>
+            <form class="form_list" action="https://www.51tuodao.com/uc/depository/uc_set" id="save_head">
+                <input type="hidden" id="act" name="act" value="background">
+                <input type="hidden" id="pic_name" name="pic_name" value="">
+                <input type="hidden" id="x" name="x" class="w100">
+                <input type="hidden" id="y" name="y" class="w100">
+                <input type="hidden" id="w" name="w" class="w100">
+                <input type="hidden" id="h" name="h" class="w100">
+                <span style="font-size: 12px;margin-left: 20px;">请选择图片后进行裁剪,头像有大、中、小三种尺寸</span>
+                <div class="btns">
+                    <input type="button" value="保存" class="confirm" onclick="uploadPicture();"><input type="reset" value="取消" class="reset">
+                </div>
+            </form>
+        </div>
+    </div>
+    <input type="hidden" name="code" value="" id="code">
+    <script src="./js/uc.js"></script>
+    <script src="./js/jcrop.js" type="text/javascript"></script>
+    <script src="./js/md5.js"></script>
+    <script src="./js/jquery.form.js"></script>
+    <script src="./js/middleObj.js"></script>
+    <script src="./js/user_set.js"></script>
+    <script src="./js/Popt.js"></script>
+    <script src="./js/cityJson.js"></script>
+    <script src="./js/citySet.js"></script>
+    <script src="./js/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        var vl = "//www.51tuodao.com/static_pro/depository/images/uc/";
+        $(function(){
+            $("#getPassword").attr("href", "/uc/depository/back_password?returnUrl=/uc/depository/uc_set");
+            $.ajax({
+                url: '/json/user/evaluation',
+                type:"post",
+                dataType:'json',
+                success:function(data){
+                    $("#evaMsg").html(data.evaMsg);
+                    if(data.evaStatus > -1){
+                        $("#eva").addClass("important");
+                        $("#eva_a").html("查看");
+                        $("#eva_a").attr("href","/front/evaluation/details");
+                    }else{
+                        $("#eva").removeClass("important");
+                        $("#eva_a").html("未测评");
+                        $("#eva_a").attr("href","/front/evaluation/index");
+                    }
+                    $.cookie('returnUrlEva', "/uc/depository/uc_set",{path: '/'});
+                },
+                error:function(textStatus,errorThrown){
+
+
+                }
+            });
+        });
+    </script>
+</div>
+<div>
+    <style>
+        /* 底部弹出层 */
+        #msgOpen{width: 130px;height: 60px;position: fixed;bottom: 60px;left: 0;z-index: 90;}
+        #msgShow{width: 100%;position: fixed;left: -100%; bottom: -10px;z-index: 100;overflow: hidden;}
+        #msgShow .bg{position: absolute;/* border-radius: 0 100px 100px 0; */left: 0;bottom: 0;width: 100%;height: 180px;background: #192E3F;opacity: 0.5;filter:alpha(opacity=50);}
+        #msgShow .position{position: absolute;width: 1180px;left: 50%;margin-left: -650px; bottom: 0;}
+        #msgShow .banner1{position: absolute;left: 0px;bottom: 0;}
+        #msgShow .rg{display: inline-block;margin-left: 750px;margin-bottom: 20px;}
+        #msgShow .rg .banner2{margin: 0px 0 10px 365px;}
+        #msgShow .rg .banner3{vertical-align: top;margin: 0 15px;}
+        #msgShow .xw-close{position: absolute;top:50%;left:50%;margin:-50px 0 0 535px;cursor: pointer;z-index: 9999;}
+    </style>
+    <div class="footer">
+        <div class="w1100">
+            <div class="f_top">
+                <dl>
+                    <dt>关于拓道</dt>
+                    <dd><a href="https://www.51tuodao.com/column/about">拓道介绍</a></dd>
+                    <dd><a href="https://www.51tuodao.com/column/contact">联系我们</a></dd>
+                    <dd><a href="https://www.51tuodao.com/column/join">加入我们</a></dd>
+                </dl>
+                <dl>
+                    <dt>相关政策</dt>
+                    <dd><a href="https://www.51tuodao.com/column/tariff">资费说明</a></dd>
+                    <dd><a href="https://www.51tuodao.com/column/media_detail?id=407&amp;typeId=11">隐私保护</a></dd>
+                </dl>
+                <dl>
+                    <dt>帮助中心</dt>
+                    <dd><a href="https://www.51tuodao.com/front/help8">常见问题</a></dd>
+                    <dd><a href="https://www.51tuodao.com/front/help">新手入门</a></dd>
+                    <dd><a href="https://www.51tuodao.com/front/help3">推荐奖励</a></dd>
+                    <dd><a href="https://www.51tuodao.com/front/novice/index">新手指南</a></dd>
+                </dl>
+                <div class="tel">
+                    <p>服务热线</p>
+                    <p class="tel1">400-85-666-85</p>
+                    <p class="modife_9">服务时间&nbsp;&nbsp;&nbsp;&nbsp;9:00-18:00</p>
+                    <div class="modife_9 online"><div class="le">在线客服</div>&nbsp;&nbsp;&nbsp;&nbsp;<div class="rg">工作日9:00-20:30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="cursor: pointer;" class="zhiCustomBtn">点击咨询</span><br>法定假日（含周末）9:00-18:00</div></div>
+                    <p class="modife_9">联系邮箱&nbsp;&nbsp;&nbsp;&nbsp;tuodaojinfu@51tuodao.com</p>
+                </div>
+                <div class="sao wx"><p>关注微信公众号</p></div>
+                <div class="sao app"><p>手机客户端下载</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <div class="w1100">
+            <div class="icp">拓道金服 Copyright Reserved 2013-20219 | 浙ICP备13034095号 | 增值电信业务经营许可证编号：浙B2-20160394&nbsp;&nbsp;|&nbsp;&nbsp;市场有风险 出借需谨慎&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.cnzz.com/stat/website.php?web_id=1256118936"><img src="./images3.1/baidu.png" height="12" width="50"></a></div>
+            <div class="pics" style="width: 380px;">
+
+                <a href="https://trustsealinfo.websecurity.norton.com/splash?form_file=fdf%2Fsplash.fdf&amp;sap=&amp;dn=www.51tuodao.com&amp;zoneoff=&amp;lang=zh_CN" target="_blank" title="安全数字证书" class="pic norton"></a>
+                <a href="http://si.trustutn.org/info?sn=518180423000641222544" target="_blank" title="互联网金融行业认证" class="pic rzlm"></a>
+                <a href="javascript:return false;" title="工信部备案信息" class="pic zxw"></a>
+                <a href="http://www.beian.gov.cn/portal/registerSystemInfo" title="中华人民共和国公安部" target="_blank" class="pic gongan"></a>
+            </div>
+        </div>
+    </div>
+    <div class="side_right" style="width: 166px;">
+        <ul>
+            <li>
+            <span class="zhiCustomBtn">
+	             	<a href="javascript:void(0)" class="iconfont"></a>
+            </span>
+            </li>
+            <li><a href="https://www.51tuodao.com/front/calc" class="iconfont"></a></li>
+            <li>
+                <a href="javascript:" class="iconfont"></a>
+                <div class="wxp"></div>
+
+            </li>
+            <li><a href="javascript:" id="totop" class="iconfont" style="display: block;"></a></li>
+        </ul>
+    </div>
+    <!-- 底部弹出层 -->
+    <div id="msgOpen" style="display: block;">
+        <img src="./images3.1/lxj.png" alt="">
+    </div>
+
+    <div id="msgShow" style="left: -100%;">
+        <img src="./images3.1/banner_cancel.png" height="30" width="30" alt="" class="xw-close" id="msgHide">
+        <a href="https://www.51tuodao.com/html5/app/nt_detail?id=15520&amp;typeId=gonggao" target="_blank"><img src="./images3.1/lxjbig.png" style="width: 100%;opacity: 0.9;filter: alpha(opacity=90);"></a>
+    </div>
+    <script>
+        $(function() {
+
+//	$.ajax({
+//		url : '/frontjson/redPacket/tenderPacketCountForPc',
+//		type : "post",
+//		dataType : 'json',
+//		success : function(data) {
+//			$("#red_num").text("");
+//			$("#red_num").text(data.count);
+//			$("#tishi_1").attr("href", "/uc/my/uc_redPacket");
+//		},
+//		error : function(textStatus, errorThrown) {
+//		}
+//	});
+
+        });
+
+
+        // (function() {
+        // 	var s = document.createElement('script');
+        // 	s.type = 'text/javascript';
+        // 	s.async = true;
+        // 	s.src = 'https://webcert.cnmstl.net/cert/grade/middle_h_img.js?sn=3a4dbed7bba64f61a97fd75ec7b300ad';
+        // 	var x = document.getElementsByTagName('script')[0];
+        // 	x.parentNode.insertBefore(s, x);
+        // })();
+        $('.top .l .weixin').live('mouseover', function() {
+            $('.weixin_ercode').show();
+        });
+
+        $('.top .l .weixin').live('mouseout', function() {
+            $('.weixin_ercode').hide();
+        });
+        $('.side_right li').eq(2).hover(function() {
+            $('.wxp').show();
+        }, function() {
+            $('.wxp').hide();
+        });
+        $('.side_right li').mouseover(function() {
+            var $this_index = $(this).index();
+            if ($this_index == 0) {
+                $(this).find('a').removeClass('iconfont');
+                $(this).find('a').addClass('a_fz');
+                $(this).find('a').html('在线客服');
+            }
+            if ($this_index == 1) {
+                $(this).find('a').removeClass('iconfont');
+                $(this).find('a').addClass('a_fz');
+                $(this).find('a').html('收益计算');
+            }
+            if ($this_index == 2) {
+                $(this).find('a').removeClass('iconfont');
+                $(this).find('a').addClass('a_fz');
+                $(this).find('a').html('官方微信');
+            }
+            if ($this_index == 3) {
+                $(this).find('a').removeClass('iconfont');
+                $(this).find('a').addClass('a_fz');
+                $(this).find('a').html('返回顶部');
+            }
+        });
+
+        $('.side_right li').mouseout(function() {
+            var $this_index = $(this).index();
+            if ($this_index == 0) {
+                $(this).find('a').attr('class', 'iconfont');
+                $(this).find('a').html("&#xe6eb;")
+            }
+            if ($this_index == 1) {
+                $(this).find('a').attr('class', 'iconfont');
+                $(this).find('a').html("&#xe616;")
+            }
+            if ($this_index == 2) {
+                $(this).find('a').attr('class', 'iconfont');
+                $(this).find('a').html("&#xe61a;")
+            }
+            if ($this_index == 3) {
+                $(this).find('a').attr('class', 'iconfont');
+                $(this).find('a').html("&#xe615;")
+            }
+        });
+        $('.nav li:last').hover(function() {
+            $(this).find('div').show();
+            $(this).find('dl').show();
+        }, function() {
+            $(this).find('div').hide();
+            $(this).find('dl').hide();
+        });
+        ////////
+        $('#totop').hide();
+        //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 100) {
+                $('.side_right').css('width', '166px');
+                $("#totop").fadeIn();
+            } else {
+                $("#totop").fadeOut();
+            }
+        });
+        //当点击跳转链接后，回到页面顶部位置
+        $("#totop").click(function() {
+            $('body,html').animate({
+                scrollTop : 0
+            }, 500);
+            return false;
+        });
+
+
+
+
+
+
+    </script>
+    <div style="display: none;">
+        <script type="text/javascript">
+            var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3fid%3d1256118936%26web_id%3d1256118936' type='text/javascript'%3E%3C/script%3E"));
+        </script><script src="./php/z_stat.php" type="text/javascript"></script>
+        <script src="./php/core.php" charset="utf-8" type="text/javascript"></script>
+        <a href="https://www.cnzz.com/stat/website.php?web_id=1256118936" target="_blank" title="站长统计">站长统计</a>
+    </div>
+    <script src="./js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="./js/common_base.js"></script></div>
+<script src="./js/entrance.js" class="zhiCustomBtn" id="zhichiScript" data-args="manual=true" charset="utf-8"></script>
+<script type="text/javascript">
+    $('#hh88').addClass("on");
+
+    $(document).ready(function(){
+        changeTitle("title4Personal");
+    });
+
+
+    function changeTitle(title){
+        $(".title4Ul").children().removeClass("on");
+        $("."+title).addClass("on");
+    }
+
+    var zhiManager = (getzhiSDKInstance());
+
+    zhiManager.set('customBtn', 'true');
+    zhiManager.set('customMargin', 120);
+
+    zhiManager.on("load", function() {
+        zhiManager.initBtnDOM();
+    });
+</script>
+
+<div id="zhichiBtnBox" style="position: fixed; z-index: 2147483583; box-shadow: rgba(15, 66, 76, 0.25) 0px 0px 14px 0px; width: 60px; height: 60px; border-radius: 50%; background-color: rgb(231, 83, 73); background-image: url(&quot;//www.sobot.com/chat/frame/imgs/icon.png&quot;); background-repeat: no-repeat; background-position: 18px -58px; right: 100px; bottom: 40px; display: none;"><a hidefocus="" id="zhichiBtn" style="position:relative;text-decoration: none; outline: none; font-family: Microsoft Yahei, Arial, Helvetica; color: #fff; font-size: 16px; display: inline-block; margin: 0; padding: 0; border: none; line-height:43px; float:none;width:100%;height:100%;border-radius:50%;"><span class="zc-advice-icon-btn-title" style="box-shadow: rgba(107, 113, 114, 0.15) 0px 2px 4px 0px; border: 1px solid rgb(235, 239, 240); font-family: &quot;Microsoft Yahei&quot;, Arial, Helvetica; color: rgb(85, 85, 86); font-size: 13px; margin: 0px; text-align: right; background: rgb(255, 255, 255); position: absolute; top: 15px; right: 70px; text-overflow: ellipsis; white-space: nowrap; word-break: normal; display: none; border-radius: 3px; padding: 0px 5px; height: 30px; line-height: 30px;">咨询在线客服</span></a><i style="position:absolute;top:0px;right:0px;padding:1px;line-height:20px;text-align:center;color:#fff;font-weight:bold;height:18px;min-width:18px;background-color:#ed5c5c;border-radius:18px;font-size:12px;display:none;font-style:normal;" id="zhichiCount"></i></div></body></html>

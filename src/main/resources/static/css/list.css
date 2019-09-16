@@ -1,0 +1,53 @@
+body{background: #f9f9f9}
+.nav{border-bottom: 1px solid #dbdbdb}
+.invest_list .ps{font-size: 14px;color: #585858;margin:35px 0 20px 0}
+.invest_list .ps li{float: left;margin-right: 30px;}
+.invest_list .ps li b{display: inline-block;width: 21px;height: 21px;border-radius: 5px;color: #fff;text-align: center;line-height: 21px;font-size: 13px}
+.invest_list .ps li span{line-height: 21px;margin-left: 5px}
+.invest_list .ps li b.cun{background: #ff4605}
+.invest_list .ps li b.tou{background: #ff711c}
+.invest_list .ps li b.jian{background: #ffb505}
+.invest_list .ps li b.duan{background: #00ac82}
+.invest_list .ps li b.qing{background: #c1c048}
+.invest_list .ps li b.huo{background: #f87d74}
+
+.invest_list ul li{height: 148px;background: #fff;border: 1px solid #ebebeb;border-radius: 5px;margin-bottom: 20px;cursor: pointer;position: relative;overflow: hidden;}
+.invest_list ul li a.full{display: block;width: 100%;height: 100%;background: none;position: absolute;top: 0;z-index: 999999;}
+.invest_list ul li .title{font-size: 16px;overflow: hidden;padding: 20px 0 0 25px}
+.invest_list ul li .title p{font-size: 16px;}
+.invest_list ul li .title p b{font-size: 13px;color: #a3a3a3;margin: 0 20px 0 10px}
+.invest_list ul li .title .type{position: relative;padding-right: 20px;}
+/*.invest_list ul li .title .type img{vertical-align: middle;}*/
+.invest_list ul li .title .type .tips{margin-left:5px;margin-top: -1px;padding:0 10px; border:1px solid #ffdfcc; position:absolute;background: #fff4ee;left: 0px;top: 0;color: #ff711c;font-size: 12px;line-height: 20px;height: 20px;border-radius: 5px;white-space:nowrap;z-index: 2;}
+.invest_list ul li .title .type .tips span{width:0; height:0; font-size:0; overflow:hidden; position:absolute;}
+.invest_list ul li .title .type .tips span.bot{border-width:5px 6px; border-style:solid; border-color:transparent #ffdfcc transparent transparent; left:-12px; top:50%;margin-top: -5px;}
+.invest_list ul li .title .type .tips span.top2{border-width:5px 6px; border-style:solid; border-color:transparent #fff4ee transparent transparent; left:-10px; top:50%;margin-top: -5px;}
+.invest_list ul li .title .type .tips a{color: #31baf2}
+.invest_list ul li .title .type img{float: left;margin-top: 4px;}
+
+
+
+.invest_list ul li .contents{overflow: hidden;margin: 0 25px}
+.invest_list ul li dl{float: left;width: 200px;margin-right: 10px;}
+.invest_list ul li dl.date{width: 130px}
+
+.invest_list.free_list ul li dl{float: left;width: 150px;margin-right: 5px;}
+.invest_list.free_list ul li dl.year{width: 200px}
+.invest_list ul li dl.price{float: left;width: 200px;margin-right: 5px;}
+.invest_list ul li dd{font-size: 16px;color: #585858;overflow: hidden;height: 40px;line-height: 55px;margin-top: 15px;}
+.invest_list ul li dd span{font-size: 40px;color: #ff711c;line-height: 40px}
+.invest_list ul li dd b{font-size: 16px;color: #ff711c}
+.invest_list ul li dd i{font-size: 16px;}
+.invest_list ul li dt{font-size: 13px;color: #a3a3a3;margin-top: 10px}
+.invest_list ul li .progress_bar{float: left;position: relative;margin-left: 0px;margin-top: 10px}
+.invest_list ul li .progress_bar p{position: absolute;top: 0;width: 70px;height: 70px;line-height: 70px;text-align: center;font-size: 17px;color: #ff711c}
+.invest_list ul li .link{width: 140px;height: 36px;overflow: hidden;line-height: 36px;text-align: center;color: #fff;font-size: 15px;background: #ff8a10;border-radius: 5px;margin-top: 30px}
+.invest_list ul li .link.times{background: #ff9695}
+.invest_list ul li .link.over{background: #b6b6b6}
+.invest_list ul li .jiaxi{background: url(../images3.1/vipjx/pcvip-1.png) no-repeat;width:146px;height:18px;color: red;line-height: 16px;padding-left: 92px;color: #CEAB3E;font-size:12px;margin-left: 25px;font-style: italic;margin-bottom: -15px}
+
+.invest_list ul li .jiaxi2{background: url(../images3.1/vipjx/pcvip-1.png) no-repeat;width:146px;height:18px;color: red;line-height: 16px;padding-left: 92px;color: #CEAB3E;font-size:12px;margin-left: 0px;font-style: italic;margin-bottom: -15px}
+.paging.list_paging{margin-top: 50px}
+
+
+

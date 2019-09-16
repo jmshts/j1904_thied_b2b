@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sy.mapper.LoanMapper" >
+  <resultMap id="BaseResultMap" type="com.sy.pojo.Loan" >
+    <id column="loanId" property="loanid" jdbcType="INTEGER" />
+    <result column="uid" property="uid" jdbcType="INTEGER" />
+    <result column="ltid" property="ltid" jdbcType="INTEGER" />
+    <result column="rmid" property="rmid" jdbcType="INTEGER" />
+    <result column="loanName" property="loanname" jdbcType="VARCHAR" />
+    <result column="loanInfo" property="loaninfo" jdbcType="VARCHAR" />
+    <result column="loanAmount" property="loanamount" jdbcType="DECIMAL" />
+    <result column="loanTime" property="loantime" jdbcType="INTEGER" />
+    <result column="deadline" property="deadline" jdbcType="INTEGER" />
+    <result column="minInvestment" property="mininvestment" jdbcType="DECIMAL" />
+    <result column="maxInvestment" property="maxinvestment" jdbcType="DECIMAL" />
+    <result column="loadNumber" property="loadnumber" jdbcType="INTEGER" />
+    <result column="rate" property="rate" jdbcType="DECIMAL" />
+    <result column="creatTime" property="creattime" jdbcType="TIMESTAMP" />
+    <result column="firstInstance" property="firstinstance" jdbcType="INTEGER" />
+    <result column="finalInstance" property="finalinstance" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    loanId, uid, ltid, rmid, loanName, loanInfo, loanAmount, loanTime, deadline, minInvestment, 
+    maxInvestment, loadNumber, rate, creatTime, firstInstance, finalInstance
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.sy.pojo.LoanExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from loan
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from loan
+    where loanId = #{loanid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from loan
+    where loanId = #{loanid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.sy.pojo.LoanExample" >
+    delete from loan
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.sy.pojo.Loan" >
+    insert into loan (loanId, uid, ltid, 
+      rmid, loanName, loanInfo, 
+      loanAmount, loanTime, deadline, 
+      minInvestment, maxInvestment, loadNumber, 
+      rate, creatTime, firstInstance, 
+      finalInstance)
+    values (#{loanid,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}, #{ltid,jdbcType=INTEGER}, 
+      #{rmid,jdbcType=INTEGER}, #{loanname,jdbcType=VARCHAR}, #{loaninfo,jdbcType=VARCHAR}, 
+      #{loanamount,jdbcType=DECIMAL}, #{loantime,jdbcType=INTEGER}, #{deadline,jdbcType=INTEGER}, 
+      #{mininvestment,jdbcType=DECIMAL}, #{maxinvestment,jdbcType=DECIMAL}, #{loadnumber,jdbcType=INTEGER}, 
+      #{rate,jdbcType=DECIMAL}, #{creattime,jdbcType=TIMESTAMP}, #{firstinstance,jdbcType=INTEGER}, 
+      #{finalinstance,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.sy.pojo.Loan" >
+    insert into loan
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="loanid != null" >
+        loanId,
+      </if>
+      <if test="uid != null" >
+        uid,
+      </if>
+      <if test="ltid != null" >
+        ltid,
+      </if>
+      <if test="rmid != null" >
+        rmid,
+      </if>
+      <if test="loanname != null" >
+        loanName,
+      </if>
+      <if test="loaninfo != null" >
+        loanInfo,
+      </if>
+      <if test="loanamount != null" >
+        loanAmount,
+      </if>
+      <if test="loantime != null" >
+        loanTime,
+      </if>
+      <if test="deadline != null" >
+        deadline,
+      </if>
+      <if test="mininvestment != null" >
+        minInvestment,
+      </if>
+      <if test="maxinvestment != null" >
+        maxInvestment,
+      </if>
+      <if test="loadnumber != null" >
+        loadNumber,
+      </if>
+      <if test="rate != null" >
+        rate,
+      </if>
+      <if test="creattime != null" >
+        creatTime,
+      </if>
+      <if test="firstinstance != null" >
+        firstInstance,
+      </if>
+      <if test="finalinstance != null" >
+        finalInstance,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="loanid != null" >
+        #{loanid,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null" >
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="ltid != null" >
+        #{ltid,jdbcType=INTEGER},
+      </if>
+      <if test="rmid != null" >
+        #{rmid,jdbcType=INTEGER},
+      </if>
+      <if test="loanname != null" >
+        #{loanname,jdbcType=VARCHAR},
+      </if>
+      <if test="loaninfo != null" >
+        #{loaninfo,jdbcType=VARCHAR},
+      </if>
+      <if test="loanamount != null" >
+        #{loanamount,jdbcType=DECIMAL},
+      </if>
+      <if test="loantime != null" >
+        #{loantime,jdbcType=INTEGER},
+      </if>
+      <if test="deadline != null" >
+        #{deadline,jdbcType=INTEGER},
+      </if>
+      <if test="mininvestment != null" >
+        #{mininvestment,jdbcType=DECIMAL},
+      </if>
+      <if test="maxinvestment != null" >
+        #{maxinvestment,jdbcType=DECIMAL},
+      </if>
+      <if test="loadnumber != null" >
+        #{loadnumber,jdbcType=INTEGER},
+      </if>
+      <if test="rate != null" >
+        #{rate,jdbcType=DECIMAL},
+      </if>
+      <if test="creattime != null" >
+        #{creattime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="firstinstance != null" >
+        #{firstinstance,jdbcType=INTEGER},
+      </if>
+      <if test="finalinstance != null" >
+        #{finalinstance,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.sy.pojo.LoanExample" resultType="java.lang.Integer" >
+    select count(*) from loan
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update loan
+    <set >
+      <if test="record.loanid != null" >
+        loanId = #{record.loanid,jdbcType=INTEGER},
+      </if>
+      <if test="record.uid != null" >
+        uid = #{record.uid,jdbcType=INTEGER},
+      </if>
+      <if test="record.ltid != null" >
+        ltid = #{record.ltid,jdbcType=INTEGER},
+      </if>
+      <if test="record.rmid != null" >
+        rmid = #{record.rmid,jdbcType=INTEGER},
+      </if>
+      <if test="record.loanname != null" >
+        loanName = #{record.loanname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.loaninfo != null" >
+        loanInfo = #{record.loaninfo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.loanamount != null" >
+        loanAmount = #{record.loanamount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.loantime != null" >
+        loanTime = #{record.loantime,jdbcType=INTEGER},
+      </if>
+      <if test="record.deadline != null" >
+        deadline = #{record.deadline,jdbcType=INTEGER},
+      </if>
+      <if test="record.mininvestment != null" >
+        minInvestment = #{record.mininvestment,jdbcType=DECIMAL},
+      </if>
+      <if test="record.maxinvestment != null" >
+        maxInvestment = #{record.maxinvestment,jdbcType=DECIMAL},
+      </if>
+      <if test="record.loadnumber != null" >
+        loadNumber = #{record.loadnumber,jdbcType=INTEGER},
+      </if>
+      <if test="record.rate != null" >
+        rate = #{record.rate,jdbcType=DECIMAL},
+      </if>
+      <if test="record.creattime != null" >
+        creatTime = #{record.creattime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.firstinstance != null" >
+        firstInstance = #{record.firstinstance,jdbcType=INTEGER},
+      </if>
+      <if test="record.finalinstance != null" >
+        finalInstance = #{record.finalinstance,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update loan
+    set loanId = #{record.loanid,jdbcType=INTEGER},
+      uid = #{record.uid,jdbcType=INTEGER},
+      ltid = #{record.ltid,jdbcType=INTEGER},
+      rmid = #{record.rmid,jdbcType=INTEGER},
+      loanName = #{record.loanname,jdbcType=VARCHAR},
+      loanInfo = #{record.loaninfo,jdbcType=VARCHAR},
+      loanAmount = #{record.loanamount,jdbcType=DECIMAL},
+      loanTime = #{record.loantime,jdbcType=INTEGER},
+      deadline = #{record.deadline,jdbcType=INTEGER},
+      minInvestment = #{record.mininvestment,jdbcType=DECIMAL},
+      maxInvestment = #{record.maxinvestment,jdbcType=DECIMAL},
+      loadNumber = #{record.loadnumber,jdbcType=INTEGER},
+      rate = #{record.rate,jdbcType=DECIMAL},
+      creatTime = #{record.creattime,jdbcType=TIMESTAMP},
+      firstInstance = #{record.firstinstance,jdbcType=INTEGER},
+      finalInstance = #{record.finalinstance,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.sy.pojo.Loan" >
+    update loan
+    <set >
+      <if test="uid != null" >
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="ltid != null" >
+        ltid = #{ltid,jdbcType=INTEGER},
+      </if>
+      <if test="rmid != null" >
+        rmid = #{rmid,jdbcType=INTEGER},
+      </if>
+      <if test="loanname != null" >
+        loanName = #{loanname,jdbcType=VARCHAR},
+      </if>
+      <if test="loaninfo != null" >
+        loanInfo = #{loaninfo,jdbcType=VARCHAR},
+      </if>
+      <if test="loanamount != null" >
+        loanAmount = #{loanamount,jdbcType=DECIMAL},
+      </if>
+      <if test="loantime != null" >
+        loanTime = #{loantime,jdbcType=INTEGER},
+      </if>
+      <if test="deadline != null" >
+        deadline = #{deadline,jdbcType=INTEGER},
+      </if>
+      <if test="mininvestment != null" >
+        minInvestment = #{mininvestment,jdbcType=DECIMAL},
+      </if>
+      <if test="maxinvestment != null" >
+        maxInvestment = #{maxinvestment,jdbcType=DECIMAL},
+      </if>
+      <if test="loadnumber != null" >
+        loadNumber = #{loadnumber,jdbcType=INTEGER},
+      </if>
+      <if test="rate != null" >
+        rate = #{rate,jdbcType=DECIMAL},
+      </if>
+      <if test="creattime != null" >
+        creatTime = #{creattime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="firstinstance != null" >
+        firstInstance = #{firstinstance,jdbcType=INTEGER},
+      </if>
+      <if test="finalinstance != null" >
+        finalInstance = #{finalinstance,jdbcType=INTEGER},
+      </if>
+    </set>
+    where loanId = #{loanid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.sy.pojo.Loan" >
+    update loan
+    set uid = #{uid,jdbcType=INTEGER},
+      ltid = #{ltid,jdbcType=INTEGER},
+      rmid = #{rmid,jdbcType=INTEGER},
+      loanName = #{loanname,jdbcType=VARCHAR},
+      loanInfo = #{loaninfo,jdbcType=VARCHAR},
+      loanAmount = #{loanamount,jdbcType=DECIMAL},
+      loanTime = #{loantime,jdbcType=INTEGER},
+      deadline = #{deadline,jdbcType=INTEGER},
+      minInvestment = #{mininvestment,jdbcType=DECIMAL},
+      maxInvestment = #{maxinvestment,jdbcType=DECIMAL},
+      loadNumber = #{loadnumber,jdbcType=INTEGER},
+      rate = #{rate,jdbcType=DECIMAL},
+      creatTime = #{creattime,jdbcType=TIMESTAMP},
+      firstInstance = #{firstinstance,jdbcType=INTEGER},
+      finalInstance = #{finalinstance,jdbcType=INTEGER}
+    where loanId = #{loanid,jdbcType=INTEGER}
+  </update>
+</mapper>

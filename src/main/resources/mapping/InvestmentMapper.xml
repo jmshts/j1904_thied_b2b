@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sy.mapper.InvestmentMapper" >
+  <resultMap id="BaseResultMap" type="com.sy.pojo.Investment" >
+    <id column="investmentId" property="investmentid" jdbcType="INTEGER" />
+    <result column="lid" property="lid" jdbcType="INTEGER" />
+    <result column="uid" property="uid" jdbcType="INTEGER" />
+    <result column="investmentAmount" property="investmentamount" jdbcType="DECIMAL" />
+    <result column="investmentTime" property="investmenttime" jdbcType="TIMESTAMP" />
+    <result column="ifMakeOver" property="ifmakeover" jdbcType="BIT" />
+    <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    investmentId, lid, uid, investmentAmount, investmentTime, ifMakeOver, remarks
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.sy.pojo.InvestmentExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from investment
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from investment
+    where investmentId = #{investmentid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from investment
+    where investmentId = #{investmentid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.sy.pojo.InvestmentExample" >
+    delete from investment
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.sy.pojo.Investment" >
+    insert into investment (investmentId, lid, uid, 
+      investmentAmount, investmentTime, ifMakeOver, 
+      remarks)
+    values (#{investmentid,jdbcType=INTEGER}, #{lid,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}, 
+      #{investmentamount,jdbcType=DECIMAL}, #{investmenttime,jdbcType=TIMESTAMP}, #{ifmakeover,jdbcType=BIT}, 
+      #{remarks,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.sy.pojo.Investment" >
+    insert into investment
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="investmentid != null" >
+        investmentId,
+      </if>
+      <if test="lid != null" >
+        lid,
+      </if>
+      <if test="uid != null" >
+        uid,
+      </if>
+      <if test="investmentamount != null" >
+        investmentAmount,
+      </if>
+      <if test="investmenttime != null" >
+        investmentTime,
+      </if>
+      <if test="ifmakeover != null" >
+        ifMakeOver,
+      </if>
+      <if test="remarks != null" >
+        remarks,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="investmentid != null" >
+        #{investmentid,jdbcType=INTEGER},
+      </if>
+      <if test="lid != null" >
+        #{lid,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null" >
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="investmentamount != null" >
+        #{investmentamount,jdbcType=DECIMAL},
+      </if>
+      <if test="investmenttime != null" >
+        #{investmenttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ifmakeover != null" >
+        #{ifmakeover,jdbcType=BIT},
+      </if>
+      <if test="remarks != null" >
+        #{remarks,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.sy.pojo.InvestmentExample" resultType="java.lang.Integer" >
+    select count(*) from investment
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update investment
+    <set >
+      <if test="record.investmentid != null" >
+        investmentId = #{record.investmentid,jdbcType=INTEGER},
+      </if>
+      <if test="record.lid != null" >
+        lid = #{record.lid,jdbcType=INTEGER},
+      </if>
+      <if test="record.uid != null" >
+        uid = #{record.uid,jdbcType=INTEGER},
+      </if>
+      <if test="record.investmentamount != null" >
+        investmentAmount = #{record.investmentamount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.investmenttime != null" >
+        investmentTime = #{record.investmenttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.ifmakeover != null" >
+        ifMakeOver = #{record.ifmakeover,jdbcType=BIT},
+      </if>
+      <if test="record.remarks != null" >
+        remarks = #{record.remarks,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update investment
+    set investmentId = #{record.investmentid,jdbcType=INTEGER},
+      lid = #{record.lid,jdbcType=INTEGER},
+      uid = #{record.uid,jdbcType=INTEGER},
+      investmentAmount = #{record.investmentamount,jdbcType=DECIMAL},
+      investmentTime = #{record.investmenttime,jdbcType=TIMESTAMP},
+      ifMakeOver = #{record.ifmakeover,jdbcType=BIT},
+      remarks = #{record.remarks,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.sy.pojo.Investment" >
+    update investment
+    <set >
+      <if test="lid != null" >
+        lid = #{lid,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null" >
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="investmentamount != null" >
+        investmentAmount = #{investmentamount,jdbcType=DECIMAL},
+      </if>
+      <if test="investmenttime != null" >
+        investmentTime = #{investmenttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ifmakeover != null" >
+        ifMakeOver = #{ifmakeover,jdbcType=BIT},
+      </if>
+      <if test="remarks != null" >
+        remarks = #{remarks,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where investmentId = #{investmentid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.sy.pojo.Investment" >
+    update investment
+    set lid = #{lid,jdbcType=INTEGER},
+      uid = #{uid,jdbcType=INTEGER},
+      investmentAmount = #{investmentamount,jdbcType=DECIMAL},
+      investmentTime = #{investmenttime,jdbcType=TIMESTAMP},
+      ifMakeOver = #{ifmakeover,jdbcType=BIT},
+      remarks = #{remarks,jdbcType=VARCHAR}
+    where investmentId = #{investmentid,jdbcType=INTEGER}
+  </update>
+</mapper>

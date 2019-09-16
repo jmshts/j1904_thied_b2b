@@ -1,0 +1,7 @@
+/*11-12 底部法人签章*/
+.inform_signature{border-top: 20px solid #f2f2f2;}
+.inform_signature .title{height: 50px;border-bottom: 1px solid #f2f2f2;padding-left: 31px;background-color: #fff;line-height: 50px;font-size: 16px;color: #333333;}
+.inform_signature img{width: 100%;height:531px;}
+.data{height:auto;}
+.law .inform_signature{border: none;}
+.td_info{margin-bottom: 50px;}

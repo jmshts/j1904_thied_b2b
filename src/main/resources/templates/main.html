@@ -1,0 +1,1050 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>拓道金服官网-专注汽车抵押借贷服务的互联网金融平台</title>
+    <meta name="keywords" content="拓道金服,拓道资本,P2P贷款,互联网理财,余额宝,中介平台,贷款,安全理财,p2p平台,网贷天眼,投资理财,汽车抵押,金融,p2p网络借贷,网上借贷,p2p网上借贷,投资理财,信用卡投资理财,网上投资理财,好易贷" />
+    <meta name="description" content="拓道金服以互联网方式为民间的小额借贷双方提供中介服务，坚定的做好投资人与借款人的信息桥梁，解决民间小额投融资的需求。并致力于打造一个规范、安全、高效、诚信、创新型的专业汽车抵押贷款服务平台。" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="renderer" content="webkit">
+    <meta property="wb:webmaster" content="bec774cb1462934c" />
+    <meta name="author" content="" />
+    <meta name="baidu-site-verification" content="MlVJaEQimm" />
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/marquee_index.js?v=1125"></script>
+    <script type="text/javascript" src="/js/jquery.flexslider-min.js?v=1125"></script>
+    <script src="js/index1.js?v=0705"></script>
+    <script type="text/javascript" src="/js/base3.1.js?v=0119"></script>
+    <!--[if IE 6]>
+    <script src="/js/plug/IE6PNG.js"></script>
+    <script type="text/javascript">
+        IE6PNG.fix('*');
+    </script>
+    <![endif]-->
+    <link rel="stylesheet" href="/js/flexslider.css?v=1125">
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/css/base3.1.css?v=0512">
+    <link rel="stylesheet" href="/css/index.css?v=190821">
+</head>
+
+<body>
+
+<div>
+    <div class="top">
+        <div class="w1100">
+            <div class="l"><i class="iconfont">&#xe608;</i><b>欢迎致电：</b><span>400-85-666-85</span>
+                <span class="zhiCustomBtn">
+	             	<a href="javascript:void(0);" class="QQ"></a>
+            </span>
+                <a href="" class="weixin"></a>
+                <a href="http://weibo.com/51tuodao" class="weibo"></a>
+                <div class="weixin_ercode"></div>
+            </div>
+            <ul class="r" id="top_userinfo">
+                <script>
+                    var $name = "";
+                    var indexname = '';
+                    var internalStatus = '';
+                    var content = '';
+                    $("#top_userinfo").html('');
+                    if($name != "" && $name != null && $name != undefined){
+                        if(internalStatus == 3) {
+                            content += '<li><a href="/uc/loan/my_borrow">' + indexname + '</a><a href="javascript:;" id="exit">退出</a></li>';
+                        } else {
+                            content += '<li><a href="/uc">' + indexname + '</a><a href="javascript:;" id="exit">退出</a></li>';
+                        }
+                    }else{
+                        content += '<li><a href="/login">登录</a>|</li><li><a href="/register?source=tdgw">注册</a>|</li>';
+                    }
+                    $("#top_userinfo").append(content);
+                </script>
+                <li><a href="/front/novice/index">新手指南</a>|</li>
+                <li><a href="/front/newhelp">帮助中心</a>|</li>
+                <li><a href="/column/new_law">出借人教育</a>|</li>
+                <li class="header_app"><a href="/front/app/appDownLoad" target="_blank" class="no_mr"><img src="/images3.1/header_app.png"></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <div class="w1100 clear">
+            <div class="logo fl">
+                <div class="pic"><a href="/"><img src="/images3.1/logo.png"></a></div>
+                <div class="slogan">
+                    <a href="/">
+                        <img src="/images3.1/biaoyu_new.png" id="slogan_img">
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav_nm fr">
+                <ul class="title4Ul">
+                    <li class="title4Main"><a class="tt" href="/main">首页</a></li>
+                    <li class="title4Manage"><a class="tt" href="/bnulkmark">散标区</a></li>
+                    <li class="title4Transfer"><a class="tt" href="/transfer">转让区</a></li>
+                    <li class="title4Saves"><a class="tt" href="/information">信息披露</a></li>
+                    <li class="title4About"><a class="tt" href="/credit" target="_blank">我要加盟</a></li>
+                    <li  class="title4Personal uc_ent">
+                         <a class="tt" href="/usermanager">我的账户</a>
+                       <!-- <a class="tt" href="/login?returnUrl=/uc">我的账户</a>
+                        <script>
+                            var $name = "";
+                            var content = '';
+                            if($name != "" && $name != null && $name != undefined){
+                                $(".uc_ent").html('');
+                                content += '<a href="/uc" class="uca" id="hh88">我的账户</a>';
+                            }
+                            $(".uc_ent").append(content);
+                        </script>-->
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <script src="/js/base3.1.js?v=20170609"></script>
+    <script src="/js/layer/layer.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <script>
+        $(function(){
+            $("#exit").click(function(){
+                layer.load(0);
+                $.ajax({
+                    url:'/login/logout',
+                    type:'post',
+                    dataType:'json',
+                    success:function(data){
+                        if(true == data.result){
+                            var src = getUrlSrc(data.logout);
+                            if(src != null &&　src != undefined && src.length > 0) {
+                                $.getScript(src[0]).done(function() {
+                                    window.location.href="/login";
+                                });
+                            } else {
+                                window.location.href="/login";
+                            }
+                        }else{
+                            layer.alert("系统繁忙，请稍后重试...",{icon:7});
+                        }
+                    },
+                    error:function(){
+                        layer.closeAll(0);
+                        layer.alert("系统繁忙，请稍后重试...",{icon:7});
+                    }
+                });
+            });
+            var now = new Date().getTime() / 1000;
+            if(now >= 1485100800 && now <= 1487001600) {
+                $('#slogan_img').attr('src', '/images3.1/springIndex.gif');
+            } else {
+                $('#slogan_img').attr('src', '/images3.1/biaoyu_new.png');
+            }
+        });
+        function getUrlSrc(htmlstr){
+            var reg=/<script.+?src=('|")?([^'"]+)('|")?(?:\s+|>)/gim;
+            var arr = [];
+            while(tem=reg.exec(htmlstr)){
+                arr.push(tem[2]);
+            }
+            return arr;
+        }
+    </script> <div>
+
+
+
+
+
+
+    <script src="/js/uaredirect.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(".title4Ul").find("li").removeClass("on");
+        $(".title4Main").addClass("on");
+        function getJsUrlParamString(){
+            var str = window.location.href;
+            var parastr = str.split("?")[1];
+            if(parastr == undefined) {
+                return "";
+            } else {
+                return "?" + parastr;
+            }
+        }
+        uaredirect("/html5"+getJsUrlParamString());
+        var account ="146亿1914万5029元";
+        var interest ="6亿583万3346元";
+        var regNum ="19万2405元";
+        var resourceUrl = "//www.51tuodao.com/static_pro";
+        var picReadUrl = "//www.51tuodao.com/upload";
+
+        //        setCookie("myad=1", "", -1);
+        //        function setCookie(c_name, value, expiredays){
+        //
+        //            var exdate=new Date();
+        //            exdate.setDate(exdate.getDate() + expiredays);
+        //            document.cookie=c_name+ "=" + escape(value) + ((expiredays==null) ? "" : ";expires="+exdate.toGMTString());
+        //        }
+
+        $.ajax({
+            url: '/front/appFirst/showForPc',
+            type: 'post',
+            dataType: 'json',
+            data: {
+            },
+            success: function (data) {
+                var s = document.cookie;
+                if (s.indexOf('myad=1') != -1) return; //存在cookie退出下面代码的执行
+                var d = new Date();
+                var timeStamp = new Date(new Date().setHours(0, 0, 0, 0));
+                d.setTime(timeStamp+1000*60*60*24);
+                document.cookie = 'myad=1;expires='+d.toGMTString();//设置cookie
+                //================
+                if (data.flag) {
+                    $('#upDepository').css('background','url('+data.urlImg+')');
+                    $("#forUrl").attr("href",data.activeUrl);
+                    $("#popup").show();
+                    $("#upDepository").show();
+                } else {
+                    $("#popup").hide();
+                    $("#upDepository").hide();
+                }
+
+            },
+            error: function () {
+                layer.close(index);
+                layer.msg("系统繁忙，请稍后重试...", {icon: 7});
+            }
+        });
+    </script>
+
+
+    <div class="banner clear">
+        <div class="flexslider">
+            <ul class="slides">
+                <li style="background:url(//www.51tuodao.com/upload/data/upfiles/images/2019-09/05/161777_scrollpic_new_1567670660618.png) 50% 0 no-repeat;">
+                    <a href="https://www.51tuodao.com/column/media_detail?id=15516&typeId=media" target="_blank">&nbsp;</a>
+                </li>
+                <li style="background:url(//www.51tuodao.com/upload/data/upfiles/images/2019-08/28/184368_scrollpic_new_1566979623279.png) 50% 0 no-repeat;">
+                    <a href="https://www.51tuodao.com/column/media_detail?id=15514&typeId=gonggao" target="_blank">&nbsp;</a>
+                </li>
+                <li style="background:url(//www.51tuodao.com/upload/data/upfiles/images/2019-08/05/184368_scrollpic_new_1564968742571.png) 50% 0 no-repeat;">
+                    <a href="https://www.51tuodao.com/column/media_detail?id=15501&typeId=gonggao" target="_blank">&nbsp;</a>
+                </li>
+                <li style="background:url(//www.51tuodao.com/upload/data/upfiles/images/2019-07/29/161777_scrollpic_new_1564387312479.png) 50% 0 no-repeat;">
+                    <a href="https://www.51tuodao.com/column/media_detail?id=15442&typeId=gonggao" target="_blank">&nbsp;</a>
+                </li>
+                <li style="background:url(//www.51tuodao.com/upload/data/upfiles/images/2019-07/29/161777_scrollpic_new_1564387364817.png) 50% 0 no-repeat;">
+                    <a href="https://www.51tuodao.com/column/compliance_load" target="_blank">&nbsp;</a>
+                </li>
+                <li style="background:url(//www.51tuodao.com/upload/data/upfiles/images/2019-07/29/161777_scrollpic_new_1564387526064.png) 50% 0 no-repeat;">
+                    <a href="http://mp.weixin.qq.com/s?__biz=MzA4MDIzMTcxOA==&mid=502812946&idx=1&sn=3be2602169d33028d71a60f2f6d97fab&chksm=07ab9d5b30dc144d4bd0d69e0d735530206ad406adbcf1711770e02f039ab52c090d8efc5e22#rd" target="_blank">&nbsp;</a>
+                </li>
+                <li style="background:url(//www.51tuodao.com/upload/data/upfiles/images/2019-07/29/161777_scrollpic_new_1564387484817.png) 50% 0 no-repeat;">
+                    <a href="https://www.51tuodao.com/column/media_detail?id=15289&typeId=gonggao" target="_blank">&nbsp;</a>
+                </li>
+                <li style="background:url(//www.51tuodao.com/upload/data/upfiles/images/2019-07/29/161777_scrollpic_new_1564387436009.png) 50% 0 no-repeat;">
+                    <a href="https://www.51tuodao.com/front/zt/388" target="_blank">&nbsp;</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="fixed" style="display: none">
+            <div class="rate">
+                <p class="f1" id="f1DivId">约定利率</p>
+                <p class="f2">8%~14%</p>
+            </div>
+            <div class="line"></div>
+            <a href="/register?source=tdgw"  id="xuanfu_al"  class="reg"><i class="iconfont" <!--class="reg"-->>注册领388元红包</i></a>
+            <div class="log" id="xuanfu_xx">已有账号？&nbsp;&nbsp;<a href="/login">立即登录</a></div>
+            <script>
+                var $flagType = "true";
+                var $name = "";
+                var content = '';
+                $("#xuanfu_xx").html('');
+                if($name != "" && $name != null && $name != undefined){
+                    $("#xuanfu_al").text('我的账户');
+                    $("#xuanfu_al").attr('href','/uc');
+                    content += '欢迎您回来！&nbsp;&nbsp;<b style="color: #FFA348;">'+$name+'</b>';
+                }else{
+                    if($flagType != "" && $flagType != null && $flagType ){
+                        $("#xuanfu_al").text('注册领388元红包');
+                    }else{
+                        $("#f1DivId").text('约定利率');
+                        $("#xuanfu_al").text('注册出借享收益');
+                    }
+
+                    $("#xuanfu_al").attr('href','/register?source=tdgw');
+                    $("#xuanfu_al").attr('target','_blank');
+                    content += '已有账号？&nbsp;&nbsp;<a href="/login">立即登录</a>';
+                }
+                $("#xuanfu_xx").append(content);
+
+            </script>
+        </div>
+    </div>
+
+    <div class="banner_bottom">
+        <div class="w1100">
+            <div class="notice fl"><i class="iconfont">&#xe82f;</i>
+                <a href="/column/media_detail?id=15514&typeId=gonggao" target="_blank">开学季大狂欢</a></li>
+
+                <a href="/column/news_list" class="more">更多></a></div>
+            <div class="news fr">
+                <div class="t_news">
+                    <ul class="news_li">
+
+                        <li>
+                            7分钟前 昆明用户133****5156出借1026.64元</li>
+                        <li>
+                            13分钟前 广州用户137****8779出借100.00元</li>
+                        <li>
+                            22分钟前 宜昌用户189****3303出借1187.24元</li>
+                        <li>
+                            28分钟前 广州用户135****8261出借1746.78元</li>
+                        <li>
+                            34分钟前 内蒙古用户136****8797出借747.14元</li>
+                    </ul>
+                    <ul class="swap"></ul>
+                </div>
+                <div class="more_news"><a href="/column/news_list">更多>></a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="special">
+        <ol class="w1100">
+            <li class="one">
+                <div class="icon">
+                    <img src="//www.51tuodao.com/static_pro/depository/images3.1/indexIcon_1.png" alt="">
+                </div>
+                <dl>
+                    <dt>资金安全</dt>
+                    <dd>银行资金存管</dd>
+                    <dd>平台与出借人资金分离</dd>
+                </dl>
+            </li>
+            <li class="two">
+                <div class="icon">
+                    <img src="/images3.1/indexIcon_2.png" alt="">
+                </div>
+
+                <dl>
+                    <dt>信息透明</dt>
+                    <dd>律师事务所鉴证 会计事务所审核</dd>
+                    <dd>中国互金协会数据接入</dd>
+                </dl>
+            </li>
+            <li class="three">
+                <div class="icon">
+                    <img src="/images3.1/indexIcon_3.png" alt="">
+                </div>
+
+                <dl>
+                    <dt>合规经营</dt>
+                    <dd>网贷百强平台</dd>
+                    <dd>已完成自律和行政核查</dd>
+                </dl>
+            </li>
+            <li class="four">
+                <div class="icon">
+                    <img src="/images3.1/indexIcon_4.png" alt="">
+                </div>
+
+                <dl>
+                    <dt>风险控制</dd>
+                    <dd>5年平台，100%车贷</dd>
+                    <dd>360度大数据风控模型</dt>
+                </dl>
+            </li>
+        </ol>
+    </div>
+
+
+
+    <div class="data">
+        <div class="w1100">
+            <dl class="fl">
+                <dd><i>累计撮合交易额</i>
+                    <span id="d"></span>
+                </dd>
+                <dd><i>累计注册用户</i><span id="g"></span></dd>
+                <dd>持续运营<span id="s"></span></dd>
+            </dl>
+            <div class="link fr"><a href="/front/platform/about">信息披露专栏&nbsp;></a></div>
+        </div>
+    </div>
+
+
+    <div class="index_list clear">
+        <div class="w1100 newbie clear">
+            <div class="pic fl"><a href="/front/novice/index">新手指南</a></div>
+            <div class="right">
+                <ul>
+
+                    <li>
+                        <a href="/front/free_borrow_detail?param=fCROg%2BZE%2FSY%3D">
+                            <div class="up">
+                                <p>省心投2019090</p>
+                                <div class="type">
+                                    <img src="/images3.1/type/xinrbiao.png">
+                                </div>
+                                <div class="year"><span>6.8</span><b>% +3% </b></div>
+                                <div class="date">
+                                    <span class="fl"><b>1 </b> 个月期限</span>
+                                    <span class="fr"><b>100.00</b>元起投</span>
+                                </div>
+                            </div>
+                            <div class="down">
+                                <div class="overplus">
+                                </div>
+                                <div class="btn">立即加入</div>
+                            </div>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/front/finance_detail?param=lvnof2UUQoc%3D">
+                            <div class="up">
+                                <p>东风标致508抵押续</p>
+                                <div class="type">
+                                    <img src="/images3.1/type/xinrbiao.png">
+                                </div>
+                                <div class="year"><span>6.8</span><b>%
+                                    +3% </b></div>
+                                <div class="date"><span class="fl"><b>1</b>
+                        个月期限
+                    </span><span class="fr"><b>100</b>元起投</span></div>
+                            </div>
+                            <div class="down">
+                                <div class="btn over">已抢完</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="img_link">
+                    <div><a href="/front/zt/388"><img src="/images3.1/newbieZN.png?v=1125"></a></div>
+                    <div><img src="/images3.1/index_app.png?v=1125"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="w1100 manage_money clear">
+            <div class="pic fl">
+                <dl>
+                    <dd class="on">省心投</dd>
+                    <dd>直投专区</dd>
+                    <dd>自由转让</dd>
+                </dl>
+            </div>
+            <div class="right fl">
+                <ul class="clear">
+                    <li  >
+                        <a href="/front/free_borrow_detail?param=aviadt3OT9k%3D">
+                            <div class="up">
+                                <p>
+                                    省心投201908261
+                                </p>
+                                <div class="type" style="min-height: 25.5px;"></div>
+                                <div class="year"><span>11.5</span><b>%
+                                    +1.5% </b></div>
+                                <div class="vipJx"><i>+0.21%</i></div>
+
+                                <div class="date">
+                                    <span class="fl"><b>36</b>个月期限</span>
+                                    <span class="fr"><b>100.00</b>元起投</span></div>
+                            </div>
+                            <div class="down">
+                                <div class="btn">立即加入</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li  >
+                        <a href="/front/free_borrow_detail?param=aVqcLm%2FcBjY%3D">
+                            <div class="up">
+                                <p>
+                                    省心投201908292
+                                </p>
+                                <div class="type" style="min-height: 25.5px;"></div>
+                                <div class="year"><span>11.5</span><b>%
+                                    +1.5% </b></div>
+                                <div class="vipJx"><i>+0.21%</i></div>
+
+                                <div class="date">
+                                    <span class="fl"><b>24</b>个月期限</span>
+                                    <span class="fr"><b>100.00</b>元起投</span></div>
+                            </div>
+                            <div class="down">
+                                <div class="btn">立即加入</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li  class="no_br">
+                        <a href="/front/free_borrow_detail?param=6AF8jBuQs5Q%3D">
+                            <div class="up">
+                                <p>
+                                    省心投201908312
+                                </p>
+                                <div class="type" style="min-height: 25.5px;"></div>
+                                <div class="year"><span>7.5</span><b>%
+                                    +1% </b></div>
+
+                                <div class="date">
+                                    <span class="fl"><b>3</b>个月期限</span>
+                                    <span class="fr"><b>100.00</b>元起投</span></div>
+                            </div>
+                            <div class="down">
+                                <div class="btn">立即加入</div>
+                            </div>
+                        </a>
+                    </li>
+            </div>
+            <div class="right fl dis_none">
+                <ul class="clear">
+
+
+                    <li  ><a href="/front/finance_detail?param=WWIUy0e3Iyg%3D">
+                        <div class="up">
+                            <p>英菲尼迪FX35抵押</p>
+                            <div class="type" style="min-height: 25.5px;"><img src="/images3.1/type/yuebiao.png"></div>
+                            <div class="year"><span>7.5</span><b>%
+                                +1.5% </b></div>
+                            <div class="date"><span class="fl"><b>3</b>
+                                    个月期限
+                            </span><span class="fr"><b>100</b>元起投</span></div>
+                        </div>
+                        <div class="down">
+                            <div class="btn over">已抢完</div>
+                        </div></a>
+
+                    <li  ><a href="/front/finance_detail?param=kkiO8G11E%2B4%3D">
+                        <div class="up">
+                            <p>丰田锐志抵押标</p>
+                            <div class="type" style="min-height: 25.5px;"><img src="/images3.1/type/yuebiao.png"></div>
+                            <div class="year"><span>7.5</span><b>%
+                                +1.5% </b></div>
+                            <div class="date"><span class="fl"><b>3</b>
+                                    个月期限
+                            </span><span class="fr"><b>100</b>元起投</span></div>
+                        </div>
+                        <div class="down">
+                            <div class="btn over">已抢完</div>
+                        </div></a>
+
+                    <li  class="no_br"><a href="/front/finance_detail?param=tWzeavAbXX4%3D">
+                        <div class="up">
+                            <p>现代名图抵押续贷标</p>
+                            <div class="type" style="min-height: 25.5px;"></div>
+                            <div class="year"><span>6.8</span><b>%
+                                +1% </b></div>
+                            <div class="date"><span class="fl"><b>1</b>
+                                    个月期限
+                            </span><span class="fr"><b>100</b>元起投</span></div>
+                        </div>
+                        <div class="down">
+                            <div class="btn">立即出借</div>
+                        </div></a>
+            </div>
+            <div class="right fl dis_none">
+                <ul class="clear">
+
+                    <li ><a href="/front/zq_details?param=C6rgh1hjQrA%3D">
+                        <div class="up">
+                            <p>大切诺基抵押标</p>
+                            <div class="form">来自[158****0702]用户</div>
+                            <div class="year"><span>12.5</span><b>%</b></div>
+                            <div class="date"><span class="fl"><b>16</b>个月剩余期限</span><span class="fr"><b>100.0</b>元起投</span></div>
+                        </div>
+                        <div class="down">
+                            <div class="btn">立即出借</div>
+                        </div></a>
+                    </li>
+
+                    <li ><a href="/front/zq_details?param=Nf%2BHc5fETQ4%3D">
+                        <div class="up">
+                            <p>现代全新胜达抵押标</p>
+                            <div class="form">来自[186****2110]用户</div>
+                            <div class="year"><span>12.5</span><b>%</b></div>
+                            <div class="date"><span class="fl"><b>9</b>个月剩余期限</span><span class="fr"><b>100.0</b>元起投</span></div>
+                        </div>
+                        <div class="down">
+                            <div class="btn">立即出借</div>
+                        </div></a>
+                    </li>
+
+                    <li class="no_br"><a href="/front/zq_details?param=xu44CXzKp6c%3D">
+                        <div class="up">
+                            <p>宝马528Li抵押标</p>
+                            <div class="form">来自[186****2110]用户</div>
+                            <div class="year"><span>12.5</span><b>%</b></div>
+                            <div class="date"><span class="fl"><b>8</b>个月剩余期限</span><span class="fr"><b>100.0</b>元起投</span></div>
+                        </div>
+                        <div class="down">
+                            <div class="btn">立即出借</div>
+                        </div></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="more fl">
+                <a id="vestUrl" href="/front/free/index">查看更多<i class="iconfont">&#xe830;</i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="operate clear">
+        <div class="w1100">
+            <a id="n1" href="" class="img"><img src="/images3.1/index_qy2.png">1</a>
+            <a id="n2" href="" class="img" target="_blank"><img style="width: 345px;height: 180px" src="//www.51tuodao.com/static_pro/pc3.0/images3.1/leader_konws.jpg">1</a>
+            <a id="n3" href="" class="no_mr img"><img src="/images3.1/index_auto.jpg">1</a>
+            <script>
+                var $name = "";
+                if($name != "" && $name != null && $name != undefined){
+                    $("#n1").attr("href","/column/bid_list");
+                    $("#n2").attr("href","/column/media_detail?id=15280&typeId=gonggao");
+                    $("#n3").attr("href","/uc/my/auto?v=160309");
+                }else{
+                    $("#n1").attr("href","/column/bid_list");
+                    $("#n2").attr("href","/column/media_detail?id=15280&typeId=gonggao");
+                    $("#n3").attr("href","/login");
+                }
+            </script>
+        </div>
+    </div>
+
+    <div class="media clear">
+        <div class="w1100">
+            <div class="b_tit"><div class="t">媒体看拓道</div><div class="line"></div></div>
+            <ul class="clear">
+                <li>
+                    <a href="/data/upfiles/images/2019-07/01/178908_article_new_1561969526558.jpg"><a href="/column/media_detail?id=15471&typeId=media">
+                        <div>
+                            <img src="//www.51tuodao.com/upload/data/upfiles/images/2019-07/01/178908_article_new_1561969526558.jpg" onerror="this.src='//www.51tuodao.com/static_pro/pc3.0/images/default.png'" style="width: 346px;height: 230px"></div>
+
+                        <p class="title">
+                            拓道网络等与贝因美战略合作：为...
+                        </p>
+                        <p class="time">
+                            2019/07/01 16:25
+                        </p>
+
+                        <p class="content">
+                            6月30日下午，帮实资本、明德资本、拓道网络携手贝因美集团战略投资母婴生态圈业务...
+                        </p>
+                    </a></li>
+                <li>
+                    <a href="/data/upfiles/images/2019-05/23/178908_article_new_1558604263516.jpg"><a href="/column/media_detail?id=15449&typeId=media">
+                        <div>
+                            <img src="//www.51tuodao.com/upload/data/upfiles/images/2019-05/23/178908_article_new_1558604263516.jpg" onerror="this.src='//www.51tuodao.com/static_pro/pc3.0/images/default.png'" style="width: 346px;height: 230px"></div>
+
+                        <p class="title">
+                            官宣！拓道金服注册资本实缴增至...
+                        </p>
+                        <p class="time">
+                            2019/05/23 17:37
+                        </p>
+
+                        <p class="content">
+                            近日，杭州P2P平台拓道金服（杭州拓道互联网金融服务有限公司）在其官网公告称，平...
+                        </p>
+                    </a></li>
+                <li class="no_mr">
+                    <a href="/data/upfiles/images/2019-04/22/106102_article_new_1555920302079.png"><a href="/column/media_detail?id=15424&typeId=media">
+                        <div>
+                            <img src="//www.51tuodao.com/upload/data/upfiles/images/2019-04/22/106102_article_new_1555920302079.png" onerror="this.src='//www.51tuodao.com/static_pro/pc3.0/images/default.png'" style="width: 346px;height: 230px"></div>
+
+                        <p class="title">
+                            拓道金服荣膺高新技术企业，科技...
+                        </p>
+                        <p class="time">
+                            2019/04/22 09:36
+                        </p>
+
+                        <p class="content">
+                            高新技术企业证书由浙江省科学技术厅、浙江省财政局、国家税务总局浙江省税务局联合颁...
+                        </p>
+                    </a></li>
+
+
+
+
+
+
+
+            </ul>
+            <div class="more clear"><a href="/column/media_list">更多</a></div>
+        </div>
+    </div>
+
+    <div class="parten clear">
+        <div class="w1100">
+            <div class="b_tit"><div class="t">合作伙伴</div><div class="line"></div></div>
+            <ul>
+                <li><a href="http://www.wdzj.com/" target="_blank" class="wdzj">&nbsp;</a></li>
+                <li><a href="http://www.chinacdlm.com/" target="_blank" class="aliyun">&nbsp;</a></li>
+                <li><a href="http://www.p2peye.com/dh.php" target="_blank" class="p2peye">&nbsp;</a></li>
+                <li><a href="javascript:void(0)"  class="hzhjxh">&nbsp;</a></li>
+                <li><a href="http://www.yingkelawyer.com"  class="bank_bj">&nbsp;</a></li>
+                <li><a href="javascript:void(0)" class="p2pchina">&nbsp;</a></li>
+                <li><a href="https://www.bestsign.cn/v3/jsp/login/index.html" target="_blank" class="baofoo">&nbsp;</a></li>
+                <li><a href="http://www.Ancun.com/" target="_blank" class="ancun">&nbsp;</a></li>
+                <li><a href="http://www.zjifa.com.cn/" target="_blank" class="tongdun">&nbsp;</a></li>
+                <li><a href="http://www.tclawfirm.com/" target="_blank" class="yingke">&nbsp;</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--首页弹出框-->
+    <div id="popup" class="dis_none"></div>
+    <div id="godepository" class="dis_none">
+        <img src="/images3.1/gotode-bg.png"/>
+        <span class="closeGoto"></span>
+        <p class="p1">拓道金服对接新网银行存管上线啦</p>
+        <p class="p2">开通银行存管，资金安全有保障</p>
+        <a href="/front/depository/deposit">点击了解资金存管</a>
+    </div>
+    <div class="upDepository dis_none"  id="upDepository">
+        <div class="upDepository_close"><img id="showImgUrl" src="/images3.1/close_alert.png" height="56" width="40" alt=""></div>
+        <div class="upDepository_top">新网银行存管全新上线</div>
+        <div class="upDepository_bom">激 活 存 管 账 户，资 金 安 全 有 保 障</div>
+        <a class="btns" id="forUrl" href="">立即前往了解></a>
+    </div>
+    <script>
+        $(function(){
+            $('.nav .nav_nm li').live('mouseover',function(){
+                $(this).find('dl').show()
+            });
+
+            $('.nav .nav_nm li').live('mouseout',function(){
+                $('.nav .nav_nm li dl').hide()
+            });
+            /**act**/
+            $('.index_act .clk').click(function(){
+                $(this).parent().remove();
+            });
+
+//        setTimeout(function(){
+//            var cookieName = "depository";
+//            var v = getCookie(cookieName);
+//
+//            if(v==undefined){
+//
+//                $("#popup").removeClass("dis_none");
+//
+//                $("#godepository").removeClass("dis_none");
+//
+//                setCookie(cookieName, cookieName);
+//
+//            }
+//
+//        },1000);
+
+            function getCookie(name)
+            {
+                var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+                if (arr != null)
+                {
+                    return unescape(arr[2]);
+                } else
+                {
+                    return null;
+                }
+            }
+
+            function setCookie(name,value)
+            {
+                //当前日期
+                var curDate = new Date();
+
+                //当前时间戳
+                var curTamp = curDate.getTime();
+
+                //当日凌晨的时间戳,减去一毫秒是为了防止后续得到的时间不会达到00:00:00的状态
+                var curWeeHours = new Date(curDate.toLocaleDateString()).getTime() - 1;
+
+                //当日已经过去的时间（毫秒）
+                var passedTamp = curTamp - curWeeHours;
+
+                //当日剩余时间
+                var leftTamp = 24 * 60 * 60 * 1000 - passedTamp;
+                var leftTime = new Date();
+                leftTime.setTime(leftTamp + curTamp);
+                //创建cookie
+                document.cookie = name + "=" + escape(value) + ";expires=" + leftTime.toGMTString();
+            }
+        });
+
+
+
+    </script>
+
+    <div>
+        <style>
+            /* 底部弹出层 */
+            #msgOpen{width: 130px;height: 60px;position: fixed;bottom: 60px;left: 0;z-index: 90;}
+            #msgShow{width: 100%;position: fixed;left: -100%; bottom: -10px;z-index: 100;overflow: hidden;}
+            #msgShow .bg{position: absolute;/* border-radius: 0 100px 100px 0; */left: 0;bottom: 0;width: 100%;height: 180px;background: #192E3F;opacity: 0.5;filter:alpha(opacity=50);}
+            #msgShow .position{position: absolute;width: 1180px;left: 50%;margin-left: -650px; bottom: 0;}
+            #msgShow .banner1{position: absolute;left: 0px;bottom: 0;}
+            #msgShow .rg{displamsgOpeny: inline-block;margin-left: 750px;margin-bottom: 20px;}
+            #msgShow .rg .banner2{margin: 0px 0 10px 365px;}
+            #msgShow .rg .banner3{vertical-align: top;margin: 0 15px;}
+            #msgShow .xw-close{position: absolute;top:50%;left:50%;margin:-50px 0 0 535px;cursor: pointer;z-index: 9999;}
+        </style>
+        <div class="footer">
+            <div class="w1100">
+                <div class="f_top">
+                    <dl>
+                        <dt>关于拓道</dt>
+                        <dd>
+                            <a href="/column/about">拓道介绍</a>
+                        </dd>
+                        <dd>
+                            <a href="/column/contact">联系我们</a>
+                        </dd>
+                        <dd>
+                            <a href="/column/join">加入我们</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>相关政策</dt>
+                        <dd>
+                            <a href="/column/tariff">资费说明</a>
+                        </dd>
+                        <dd>
+                            <a href="/column/media_detail?id=407&typeId=11">隐私保护</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>帮助中心</dt>
+                        <dd>
+                            <a href="/front/newhelp8">常见问题</a>
+                        </dd>
+                        <dd>
+                            <a href="/front/help">新手入门</a>
+                        </dd>
+                        <dd>
+                            <a href="/front/help3" id="tuijianId">推荐奖励</a>
+                        </dd>
+                        <dd>
+                            <a href="/front/novice/index">新手指南</a>
+                        </dd>
+                    </dl>
+                    <div class="tel">
+                        <p>服务热线</p>
+                        <p class="tel1">400-85-666-85</p>
+                        <p class="modife_9">服务时间&nbsp;&nbsp;&nbsp;&nbsp;9:00-18:00</p>
+                        <div class="modife_9 online">
+                            <div class="le">在线客服</div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="rg">
+                                工作日9:00-20:30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                    style="cursor: pointer;" class="zhiCustomBtn">点击咨询</span><br />法定假日（含周末）9:00-18:00
+                            </div>
+                        </div>
+                        <p class="modife_9">联系邮箱&nbsp;&nbsp;&nbsp;&nbsp;tuodaojinfu@51tuodao.com</p>
+                    </div>
+                    <div class="sao wx">
+                        <p>关注微信公众号</p>
+                    </div>
+                    <div class="sao app">
+                        <p>手机客户端下载</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="w1100">
+                <div class="icp">
+                    拓道金服 Copyright Reserved 2013-2019 | 浙ICP备13034095号 |
+                    增值电信业务经营许可证编号：浙B2-20160394&nbsp;&nbsp;|&nbsp;&nbsp;市场有风险 出借需谨慎&nbsp;&nbsp;&nbsp;&nbsp;<a
+                        href="http://www.cnzz.com/stat/website.php?web_id=1256118936"><img
+                        src="//www.51tuodao.com/static_pro/pc3.0/images/baidu.png" height="12" width="50"></a>
+                </div>
+                <div class="pics" style="width: 380px;">
+                    <a
+                            href="https://trustsealinfo.websecurity.norton.com/splash?form_file=fdf%2Fsplash.fdf&sap=&dn=www.51tuodao.com&zoneoff=&lang=zh_CN"
+                            target="_blank" title="安全数字证书" class="pic norton"></a>
+                    <a
+                            href="http://si.trustutn.org/info?sn=518180423000641222544"
+                            target="_blank" title="互联网金融行业认证" class="pic rzlm"></a> 			<a
+                        href="javascript:return false;" title="工信部备案信息"
+                        class="pic zxw"></a>  <a
+                        href="http://www.beian.gov.cn/portal/registerSystemInfo"
+                        title="中华人民共和国公安部" class="pic gongan"></a>
+                </div>
+            </div>
+        </div>
+        <div class="side_right">
+            <ul>
+                <li><span class="zhiCustomBtn"> <a
+                        href="javascript:void(0);" class="iconfont">&#xe6eb;</a>
+		</span></li>
+                <li><a href="/front/calc" class="iconfont">&#xe616;</a></li>
+                <li><a href="javascript:" class="iconfont">&#xe61a;</a>
+                    <div class="wxp"></div></li>
+                <li><a href="javascript:" id="totop" class="iconfont">&#xe615;</a></li>
+            </ul>
+        </div>
+        <!-- 底部弹出层 -->
+        <div id="msgOpen">
+            <img src="/images3.1/kxkgs.png?v=0524" alt="">
+        </div>
+
+        <div id="msgShow">
+            <img src="/images3.1/banner_cancel.png" height="30" width="30" alt="" class="xw-close" id="msgHide">
+            <a href="/column/media_detail?id=15514&typeId=gonggao" target="_blank"><img src="/images3.1/kxkgf.png?v=0523" style="width: 100%;opacity: 0.9;filter: alpha(opacity=90);"></a>
+        </div>
+        <script>
+            $(function() {
+
+//		$.ajax({
+//			url : '/frontjson/redPacket/tenderPacketCountForPc',
+//			type : "post",
+//			dataType : 'json',
+//			success : function(data) {
+//
+//				$("#red_num").text(data.count);
+//				$("#tishi_1").attr("href", "/uc/my/uc_redPacket");
+//			},
+//			error : function(textStatus, errorThrown) {
+//			}
+//		});
+
+            });
+
+            // (function() {
+            // 	var s = document.createElement('script');
+            // 	s.type = 'text/javascript';
+            // 	s.async = true;
+            // 	s.src = 'https://webcert.cnmstl.net/cert/grade/middle_h_img.js?sn=3a4dbed7bba64f61a97fd75ec7b300ad';
+            // 	var x = document.getElementsByTagName('script')[0];
+            // 	x.parentNode.insertBefore(s, x);
+            // })();
+            $('.top .l .weixin').live('mouseover', function() {
+                $('.weixin_ercode').show();
+            });
+
+            $('.top .l .weixin').live('mouseout', function() {
+            });
+            $('.side_right li').eq(2).hover(function() {
+                $('.wxp').show();
+            }, function() {
+                $('.wxp').hide();
+            });
+            $('.side_right li').mouseover(function() {
+                var $this_index = $(this).index();
+                if ($this_index == 0) {
+                    $(this).find('a').removeClass('iconfont');
+                    $(this).find('a').addClass('a_fz');
+                    $(this).find('a').html('在线客服');
+                }
+                if ($this_index == 1) {
+                    $(this).find('a').removeClass('iconfont');
+                    $(this).find('a').addClass('a_fz');
+                    $(this).find('a').html('收益计算');
+                }
+                if ($this_index == 2) {
+                    $(this).find('a').removeClass('iconfont');
+                    $(this).find('a').addClass('a_fz');
+                    $(this).find('a').html('官方微信');
+                }
+                if ($this_index == 3) {
+                    $(this).find('a').removeClass('iconfont');
+                    $(this).find('a').addClass('a_fz');
+                    $(this).find('a').html('返回顶部');
+                }
+            });
+
+            $('.side_right li').mouseout(function() {
+                var $this_index = $(this).index();
+                if ($this_index == 0) {
+                    $(this).find('a').attr('class', 'iconfont');
+                    $(this).find('a').html("&#xe6eb;")
+                }
+                if ($this_index == 1) {
+                    $(this).find('a').attr('class', 'iconfont');
+                    $(this).find('a').html("&#xe616;")
+                }
+                if ($this_index == 2) {
+                    $(this).find('a').attr('class', 'iconfont');
+                    $(this).find('a').html("&#xe61a;")
+                }
+                if ($this_index == 3) {
+                    $(this).find('a').attr('class', 'iconfont');
+                    $(this).find('a').html("&#xe615;")
+                }
+            });
+            $('.nav li:last').hover(function() {
+                $(this).find('div').show();
+                $(this).find('dl').show();
+            }, function() {
+                $(this).find('div').hide();
+                $(this).find('dl').hide();
+            });
+            ////////
+            $('#totop').hide();
+            //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 100) {
+                    $('.side_right').css('width', '166px');
+                    $("#totop").fadeIn();
+                } else {
+                    $("#totop").fadeOut();
+                }
+            });
+            //当点击跳转链接后，回到页面顶部位置
+            $("#totop").click(function() {
+                $('body,html').animate({
+                    scrollTop : 0
+                }, 500);
+                return false;
+            });
+
+            $.ajax({
+                url : "/front/system/isOpenAward?awardType=invite",
+                type : "get",
+                dataType : "json",
+                success : function(data) {
+                    if (data.falgType) {
+                        $("#tuijianId").empty().html("推荐奖励");
+
+                    } else {
+                        $("#tuijianId").empty().html("推荐方式");
+                    }
+                },
+                error : function(err) {
+                    console.log(err);
+                    layer.alert("系统繁忙，请稍后重试...", {
+                        icon : 7
+                    });
+                }
+            });
+        </script>
+        <div style="display: none;">
+            <script type="text/javascript">
+                var cnzz_protocol = (("https:" == document.location.protocol) ? " https://"
+                    : " http://");
+                document
+                    .write(unescape("%3Cscript src='"
+                        + cnzz_protocol
+                        + "s95.cnzz.com/z_stat.php%3fid%3d1256118936%26web_id%3d1256118936' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+        </div>
+        <script type="text/javascript"
+                src="/js/common_base.js"></script>
+    </div>
+    <script src="/js/entrance.js?sysNum=2dc8a1e8e22b4f84a5750007f01fc664" class="zhiCustomBtn" id="zhichiScript" data-args="manual=true" charset="utf-8"></script>
+    <script>
+        $('#hh1').addClass("on");
+        var zhiManager = (getzhiSDKInstance());
+
+        zhiManager.set('customBtn', 'true');
+        zhiManager.set('customMargin', 120);
+
+        zhiManager.on("load", function() {
+            zhiManager.initBtnDOM();
+        });
+    </script>
+</body>
+</html>
