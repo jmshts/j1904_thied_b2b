@@ -36,23 +36,22 @@
     layui.use("form",function () {
         var form = layui.form;
         var $ = layui.$;
-
+        var email = $("#email").val();
         form.on("submit(register)",function (data) {
             var inputCheckCode = $("#checkCode").val();
-            var email = $("#email").val();
             if (inputCheckCode == checkCode){
                 $.ajax({
-                    url:"/register",
+                    url:"/checkemailtrue",
                     type:"POST",
                     data:data.field,
                     async:false,
                     success:function (text) {
                         if ("ok" == text){
-                            layer.alert("注册成功",function () {
-                                window.location.href = "index.html";
+                            layer.alert("验证成功",function () {
+                                window.location.href = "/userinfosetting";
                             });
                         }else{
-                            layer.alert("注册失败");
+                            layer.alert("验证失败");
                         }
                     }
                 });

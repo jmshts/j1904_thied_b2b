@@ -3,8 +3,10 @@ package com.sy.mapper;
 import com.sy.pojo.Investment;
 import com.sy.pojo.InvestmentExample;
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+@Mapper
 public interface InvestmentMapper {
     int countByExample(InvestmentExample example);
 

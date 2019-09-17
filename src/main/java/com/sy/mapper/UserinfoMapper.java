@@ -3,8 +3,10 @@ package com.sy.mapper;
 import com.sy.pojo.Userinfo;
 import com.sy.pojo.UserinfoExample;
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+@Mapper
 public interface UserinfoMapper {
     int countByExample(UserinfoExample example);
 

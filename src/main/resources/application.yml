@@ -7,3 +7,18 @@ spring:
     username: root
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver
+  mail:
+    default-encoding: utf-8
+    host: smtp.qq.com
+    username: 420248148@qq.com
+    password: nidxnlsftubxcbdi
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.sy.pojo

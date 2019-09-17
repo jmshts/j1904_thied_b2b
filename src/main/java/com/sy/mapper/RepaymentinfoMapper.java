@@ -3,8 +3,10 @@ package com.sy.mapper;
 import com.sy.pojo.Repaymentinfo;
 import com.sy.pojo.RepaymentinfoExample;
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+@Mapper
 public interface RepaymentinfoMapper {
     int countByExample(RepaymentinfoExample example);
 
