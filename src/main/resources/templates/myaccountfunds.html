@@ -1,22 +1,540 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h2>我的账户资金</h2>
-<a href="/main">首页</a>
-<a href="/bnulkmark">散标区</a>
-<a href="/transfer">转让区</a>
-<a href="/information">信息披露</a>
-<a href="/credit">我要贷款</a>
-<a href="/usermanager">我的账户</a><br/>
-<a href="/usermanager">账户总览</a>
-<a href="/myborrow">出借信息</a>
-<a href="/mytransfer">转让信息</a>
-<a href="/myfundrecord">资金记录</a>
-<a href="/myaccountfunds">账户资金</a>
-<a href="/myaccountsettings">账户设置</a>
-</body>
-</html>
+<!-- saved from url=(0050)https://www.51tuodao.com/uc/depository/uc_bankroll -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>拓道金服-专注汽车抵押借贷服务的互联网金融平台</title>
+
+
+
+    <meta name="renderer" content="webkit">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/base3.1.css">
+    <link rel="stylesheet" href="/css/uc.css">
+    <script type="text/javascript" async="" src="./js/fm.js"></script>
+    <script src="/jsjquery-1.9.1.min.js"></script>
+    <script src="/js/layer.js"></script>
+    <link rel="stylesheet" href="/css/layer.css" id="layui_layer_skinlayercss" style="">
+
+    <style></style></head>
+
+<body style="font: 16px/1.3 tahoma,arial,&#39;微软雅黑&#39;;">
+<div>
+    <div class="top">
+        <div class="w1100">
+            <div class="l"><i class="iconfont"></i><b>欢迎致电：</b><span>400-85-666-85</span>
+                <span class="zhiCustomBtn">
+	             	<a href="javascript:void(0)" class="QQ"></a>
+             </span>
+                <a href="https://www.51tuodao.com/uc/depository/uc_bankroll" class="weixin"></a>
+                <a href="http://weibo.com/51tuodao" class="weibo"></a>
+                <div class="weixin_ercode"></div>
+            </div>
+            <ul class="r" id="top_userinfo"><li><a href="https://www.51tuodao.com/uc">177****8215</a><a href="javascript:;" id="exit">退出</a></li>
+                <li><a href="https://www.51tuodao.com/front/novice/index">新手指南</a>|</li>
+                <li><a href="https://www.51tuodao.com/front/newhelp">帮助中心</a>|</li>
+                <li><a href="https://www.51tuodao.com/column/new_law">出借人教育</a>|</li>
+                <li class="header_app"><a href="https://www.51tuodao.com/front/app/appDownLoad" target="_blank" class="no_mr"><img src="/images3.1/header_app.png"></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <div class="w1100 clear">
+            <div class="logo fl">
+                <div class="pic"><a href="https://www.51tuodao.com/"><img src="/images3.1/logo.png"></a></div>
+                <div class="slogan">
+                    <a href="https://www.51tuodao.com/">
+                        <img src="/images3.1/biaoyu_new.png" id="slogan_img">
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav_nm fr">
+                <ul class="title4Ul">
+                    <li class="title4Main"><a class="tt" href="/main">首页</a></li>
+                    <li class="title4Manage"><a class="tt" href="/bnulkmark">散标区</a></li>
+                    <li class="title4Transfer"><a class="tt" href="/transfer">转让区</a></li>
+                    <li class="title4Saves"><a class="tt" href="/information">信息披露</a></li>
+                    <li class="title4About"><a class="tt" href="/credit" target="_blank">我要加盟</a></li>
+                    <li  class="title4Personal on">
+                        <a class="tt" href="/usermanager">我的账户</a>
+                        <!-- <a class="tt" href="/login?returnUrl=/uc">我的账户</a>
+                         <script>
+                             var $name = "";
+                             var content = '';
+                             if($name != "" && $name != null && $name != undefined){
+                                 $(".uc_ent").html('');
+                                 content += '<a href="/uc" class="uca" id="hh88">我的账户</a>';
+                             }
+                             $(".uc_ent").append(content);
+                         </script>-->
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <script src="/js/base.js"></script>
+    <script src="/js/base3.1.js"></script>
+    <script src="/js/layer.js(1)"></script>
+    <script>
+        $(function(){
+            $("#exit").click(function(){
+                layer.load(0);
+                $.ajax({
+                    url:'/login/logout',
+                    type:'post',
+                    dataType:'json',
+                    success:function(data){
+                        if(true == data.result){
+                            var src = getUrlSrc(data.logout);
+                            if(src != null &&　src != undefined && src.length > 0) {
+                                $.getScript(src[0]).done(function() {
+                                    window.location.href="/front/login";
+                                });
+                            } else {
+                                window.location.href="/front/login";
+                            }
+                        }else{
+                            layer.alert("系统繁忙，请稍后重试...",{icon:7});
+                        }
+                    },
+                    error:function(){
+                        layer.closeAll(0);
+                        layer.alert("系统繁忙，请稍后重试...",{icon:7});
+                    }
+                });
+            });
+            var now = new Date().getTime() / 1000;
+            if(now >= 1485100800 && now <= 1487001600) {
+                $('#slogan_img').attr('src', '/images3.1/springIndex.gif');
+            } else {
+                $('#slogan_img').attr('src', '/images3.1/biaoyu_new.png');
+            }
+        });
+        function getUrlSrc(htmlstr){
+            var reg=/<script.+?src=('|")?([^'"]+)('|")?(?:\s+|>)/gim;
+            var arr = [];
+            while(tem=reg.exec(htmlstr)){
+                arr.push(tem[2]);
+            }
+            return arr;
+        }
+    </script></div>
+<div class="w1100 clear">
+    <div>
+        <div class="uc_menu">
+            <div class="menu_top">
+                <div class="head_portrait">
+                    <div class="uc_icon">
+                        <div class="user_bg"></div>
+                        <img id="headPic" src="/images3.1/default_pic_78.png" class="user_icon">
+                        <div class="edit_icon dis_none">编辑头像</div>
+                    </div>
+                    <!-- <div class="news_num">
+                        <span class="fl jt"></span><span class="fl c">你有99条新消息..</span>
+                    </div> -->
+                </div>
+                <p class="fz">您好！17765868215</p>
+                <div class="safe">
+                    <!-- <span class="level">安全等级&nbsp;&nbsp;<i>中</i></span> -->
+                    <ul class="factor">
+                        <a href="https://www.51tuodao.com/front/depository/person_bank_open?returnUrl=/uc/depository/uc_set" id="cunguanLink">
+                            <li class="cunguan"><!--已开通存管  点亮加 on-->
+                                <div class="tips dis_none">
+                                    <span class="fl jt"></span><span class="fl c" id="cunguanStatus">未开通存管</span><!--已开通存管-->
+                                </div>
+                            </li>
+                        </a>
+                        <a href="https://www.51tuodao.com/front/vip/level_detail">
+                            <li class="vip0" id="vipClass">
+                                <div class="tips dis_none" style="display: none;">
+                                    <span class="fl jt"></span><span class="fl c" id="vipStatus">VIP等级：0</span>
+                                </div>
+                            </li>
+                        </a>
+                        <a href="https://www.51tuodao.com/uc/depository/uc_news">
+                            <li class="xx_info">
+                                <span class="iconfont"></span>
+                                <div class="tips">
+                                    <span class="fl jt"></span><span class="fl c">消息</span>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu_main">
+                <ul id="menu_uc">
+                    <li class="uc on"><a href="/usermanager" ><i></i>账户总览</a></li>
+                    <li class="uc_invest uc_invest_details invest_details"><a href="/myborrow"><i></i>我的出借</a></li>
+                    <li class="uc_bond"><a href="/mytransfer"><i></i>我的转让</a></li>
+                    <li class="uc_bankroll"><a href="/myfundrecord" class="on"><i></i>资金记录</a></li>
+                    <li class="reward">
+                        <a href="/myaccountfunds"><i></i>账户资金<span class="new_tips" id="voucherTip_all" style="display: none;"></span></a>
+                    </li>
+                    <li class="uc_set"><a href="/myaccountsettings"><i></i>账户设置</a></li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            var page = "uc_bankroll";
+            if(page != ""){
+                $("." + page + " a").addClass("on");
+            }else{
+                $(".uc").addClass("on");
+            }
+
+            function nofind(){
+                $('#headPic').attr("src", "/images/default_pic_78.png");
+                $('#headPic').removeAttr("onerror", null);
+            }
+            $('.menu_top .uc_icon').hover(
+                function(){
+                    $('.menu_top .uc_icon .edit_icon').fadeIn(300);
+                    $('.menu_top .uc_icon .edit_icon').attr('id','abc')
+                },
+                function(){
+                    $('.menu_top .uc_icon .edit_icon').fadeOut(300);
+                    $('.menu_top .uc_icon .edit_icon').removeAttr('id');
+                }
+            );
+            $('.menu_top .uc_icon').click(
+                function(){
+                    window.location.href = "/uc/depository/uc_set?act=eidtPic";
+                }
+            );
+
+            $(function(){
+                $('.safe li').hover(
+
+                    function(){
+                        $(this).find('.tips').show();
+                    },
+
+                    function(){
+                        $(this).find('.tips').hide();
+                    });
+
+                uc_left();
+            });
+
+            function uc_left(){
+                $.ajax({
+                    url: "/json/uc/userInfo?t="+new Date(),
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json",
+                    success:function(data) {
+                        if(data.result) {
+                            if(data.phoneStatus == 1){
+                                $(".phone").addClass("on");
+                                $("#phoneStatus").text("已绑定手机");
+                            }else{
+                                $(".phone").removeClass("on");
+                                $("#phoneStatus").text("未绑定手机");
+                            }
+                            if(data.realnameStatus == 1){
+                                $(".sfz").addClass("on");
+                                $("#realNameStatus").text("已实名认证");
+                            }else{
+                                $(".sfz").removeClass("on");
+                                $("#realNameStatus").text("未实名认证");
+                            }
+                            if(data.voucherTip == 1){
+                                $("#voucherTip_all").hide();
+                            }else{
+                                $("#voucherTip_all").show();
+                            }
+                            if(data.pointsTip == 1){
+                                $("#pointsTip_all").hide();
+                            }else{
+                                $("#pointsTip_all").show();
+                            }
+
+                            $("#vipStatus").text("VIP等级："+ data.vipstatus);
+                            $("#vipClass").addClass("vip"+ data.vipstatus);
+
+                            if(data.cunguanStatus === 1){
+                                $(".cunguan").addClass("on");
+                                $("#cunguanStatus").text("已开通存管");
+                                $("#cunguanLink").attr("href","/uc/depository/uc_set");
+                            }else if(data.cunguanStatus === 0){
+                                $(".cunguan").removeClass("on");
+                                $("#cunguanStatus").text("存管激活中");
+                                $("#cunguanLink").attr("href","/front/depository/person_bank_open");
+                            }else{
+                                $(".cunguan").removeClass("on");
+                                $("#cunguanStatus").text("未开通存管");
+                                $("#cunguanLink").attr("href","/front/depository/person_bank_open?returnUrl=/uc/depository/uc_set");
+                            }
+
+                            /*if(data.isOldUser == 1){
+                                $("#dOldUser").show();
+                            }else{
+                                $("#dOldUser").hide();
+                            }*/
+                        }
+                    },
+                    error:function(data) {
+                    }
+                });
+            }
+        </script>
+    </div>
+
+    <link rel="stylesheet" href="./css/dateRange.css">
+    <div class="uc_right uc_bankroll">
+
+        <!--3.9.2版本 start-->
+        <div class="money_total"></div>
+
+        <table id="tableTime">
+            <tbody><tr>
+                <th class="time">时间</th>
+                <th>类型</th>
+                <th>交易金额</th>
+                <th>可用余额</th>
+                <th>备注</th>
+            </tr><tr><td colspan="10" class="get_data">暂无记录</td></tr>
+            </tbody></table>
+        <div class="paging tcdPageCode"></div>
+    </div>
+    <script type="text/javascript" src="./js/jquery.page2.js"></script>
+    <script src="./js/uc.js"></script>
+    <script src="./js/layer2.js"></script>
+
+    <script src="./js/uc_bankroll.js"></script>
+    <script src="./js/dateRange.js"></script>
+</div>
+<div>
+    <style>
+        /* 底部弹出层 */
+        #msgOpen{width: 130px;height: 60px;position: fixed;bottom: 60px;left: 0;z-index: 90;}
+        #msgShow{width: 100%;position: fixed;left: -100%; bottom: -10px;z-index: 100;overflow: hidden;}
+        #msgShow .bg{position: absolute;/* border-radius: 0 100px 100px 0; */left: 0;bottom: 0;width: 100%;height: 180px;background: #192E3F;opacity: 0.5;filter:alpha(opacity=50);}
+        #msgShow .position{position: absolute;width: 1180px;left: 50%;margin-left: -650px; bottom: 0;}
+        #msgShow .banner1{position: absolute;left: 0px;bottom: 0;}
+        #msgShow .rg{display: inline-block;margin-left: 750px;margin-bottom: 20px;}
+        #msgShow .rg .banner2{margin: 0px 0 10px 365px;}
+        #msgShow .rg .banner3{vertical-align: top;margin: 0 15px;}
+        #msgShow .xw-close{position: absolute;top:50%;left:50%;margin:-50px 0 0 535px;cursor: pointer;z-index: 9999;}
+    </style>
+    <div class="footer">
+        <div class="w1100">
+            <div class="f_top">
+                <dl>
+                    <dt>关于拓道</dt>
+                    <dd><a href="https://www.51tuodao.com/column/about">拓道介绍</a></dd>
+                    <dd><a href="https://www.51tuodao.com/column/contact">联系我们</a></dd>
+                    <dd><a href="https://www.51tuodao.com/column/join">加入我们</a></dd>
+                </dl>
+                <dl>
+                    <dt>相关政策</dt>
+                    <dd><a href="https://www.51tuodao.com/column/tariff">资费说明</a></dd>
+                    <dd><a href="https://www.51tuodao.com/column/media_detail?id=407&amp;typeId=11">隐私保护</a></dd>
+                </dl>
+                <dl>
+                    <dt>帮助中心</dt>
+                    <dd><a href="https://www.51tuodao.com/front/help8">常见问题</a></dd>
+                    <dd><a href="https://www.51tuodao.com/front/help">新手入门</a></dd>
+                    <dd><a href="https://www.51tuodao.com/front/help3">推荐奖励</a></dd>
+                    <dd><a href="https://www.51tuodao.com/front/novice/index">新手指南</a></dd>
+                </dl>
+                <div class="tel">
+                    <p>服务热线</p>
+                    <p class="tel1">400-85-666-85</p>
+                    <p class="modife_9">服务时间&nbsp;&nbsp;&nbsp;&nbsp;9:00-18:00</p>
+                    <div class="modife_9 online"><div class="le">在线客服</div>&nbsp;&nbsp;&nbsp;&nbsp;<div class="rg">工作日9:00-20:30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="cursor: pointer;" class="zhiCustomBtn">点击咨询</span><br>法定假日（含周末）9:00-18:00</div></div>
+                    <p class="modife_9">联系邮箱&nbsp;&nbsp;&nbsp;&nbsp;tuodaojinfu@51tuodao.com</p>
+                </div>
+                <div class="sao wx"><p>关注微信公众号</p></div>
+                <div class="sao app"><p>手机客户端下载</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <div class="w1100">
+            <div class="icp">拓道金服 Copyright Reserved 2013-20219 | 浙ICP备13034095号 | 增值电信业务经营许可证编号：浙B2-20160394&nbsp;&nbsp;|&nbsp;&nbsp;市场有风险 出借需谨慎&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.cnzz.com/stat/website.php?web_id=1256118936"><img src="./images3.1/baidu.png" height="12" width="50"></a></div>
+            <div class="pics" style="width: 380px;">
+
+                <a href="https://trustsealinfo.websecurity.norton.com/splash?form_file=fdf%2Fsplash.fdf&amp;sap=&amp;dn=www.51tuodao.com&amp;zoneoff=&amp;lang=zh_CN" target="_blank" title="安全数字证书" class="pic norton"></a>
+                <a href="http://si.trustutn.org/info?sn=518180423000641222544" target="_blank" title="互联网金融行业认证" class="pic rzlm"></a>
+                <a href="javascript:return false;" title="工信部备案信息" class="pic zxw"></a>
+                <a href="http://www.beian.gov.cn/portal/registerSystemInfo" title="中华人民共和国公安部" target="_blank" class="pic gongan"></a>
+            </div>
+        </div>
+    </div>
+    <div class="side_right">
+        <ul>
+            <li>
+            <span class="zhiCustomBtn">
+	             	<a href="javascript:void(0)" class="iconfont"></a>
+            </span>
+            </li>
+            <li><a href="https://www.51tuodao.com/front/calc" class="iconfont"></a></li>
+            <li>
+                <a href="javascript:" class="iconfont"></a>
+                <div class="wxp" style="display: none;"></div>
+
+            </li>
+            <li><a href="javascript:" id="totop" class="iconfont" style="display: none;"></a></li>
+        </ul>
+    </div>
+    <!-- 底部弹出层 -->
+    <div id="msgOpen" style="display: block;">
+        <img src="./images3.1/lxj.png" alt="">
+    </div>
+
+    <div id="msgShow" style="left: -100%;">
+        <img src="./images3.1/banner_cancel.png" height="30" width="30" alt="" class="xw-close" id="msgHide">
+        <a href="https://www.51tuodao.com/html5/app/nt_detail?id=15520&amp;typeId=gonggao" target="_blank"><img src="./images3.1/lxjbig.png" style="width: 100%;opacity: 0.9;filter: alpha(opacity=90);"></a>
+    </div>
+    <script>
+        $(function() {
+
+            $.ajax({
+                url : '/frontjson/redPacket/tenderPacketCountForPc',
+                type : "post",
+                dataType : 'json',
+                success : function(data) {
+                    $("#red_num").text("");
+                    $("#red_num").text(data.count);
+                    $("#tishi_1").attr("href", "/uc/my/uc_redPacket");
+                },
+                error : function(textStatus, errorThrown) {
+                }
+            });
+
+        });
+
+
+        // (function() {
+        // 	var s = document.createElement('script');
+        // 	s.type = 'text/javascript';
+        // 	s.async = true;
+        // 	s.src = 'https://webcert.cnmstl.net/cert/grade/middle_h_img.js?sn=3a4dbed7bba64f61a97fd75ec7b300ad';
+        // 	var x = document.getElementsByTagName('script')[0];
+        // 	x.parentNode.insertBefore(s, x);
+        // })();
+        $('.top .l .weixin').live('mouseover', function() {
+            $('.weixin_ercode').show();
+        });
+
+        $('.top .l .weixin').live('mouseout', function() {
+            $('.weixin_ercode').hide();
+        });
+        $('.side_right li').eq(2).hover(function() {
+            $('.wxp').show();
+        }, function() {
+            $('.wxp').hide();
+        });
+        $('.side_right li').mouseover(function() {
+            var $this_index = $(this).index();
+            if ($this_index == 0) {
+                $(this).find('a').removeClass('iconfont');
+                $(this).find('a').addClass('a_fz');
+                $(this).find('a').html('在线客服');
+            }
+            if ($this_index == 1) {
+                $(this).find('a').removeClass('iconfont');
+                $(this).find('a').addClass('a_fz');
+                $(this).find('a').html('收益计算');
+            }
+            if ($this_index == 2) {
+                $(this).find('a').removeClass('iconfont');
+                $(this).find('a').addClass('a_fz');
+                $(this).find('a').html('官方微信');
+            }
+            if ($this_index == 3) {
+                $(this).find('a').removeClass('iconfont');
+                $(this).find('a').addClass('a_fz');
+                $(this).find('a').html('返回顶部');
+            }
+        });
+
+        $('.side_right li').mouseout(function() {
+            var $this_index = $(this).index();
+            if ($this_index == 0) {
+                $(this).find('a').attr('class', 'iconfont');
+                $(this).find('a').html("&#xe6eb;")
+            }
+            if ($this_index == 1) {
+                $(this).find('a').attr('class', 'iconfont');
+                $(this).find('a').html("&#xe616;")
+            }
+            if ($this_index == 2) {
+                $(this).find('a').attr('class', 'iconfont');
+                $(this).find('a').html("&#xe61a;")
+            }
+            if ($this_index == 3) {
+                $(this).find('a').attr('class', 'iconfont');
+                $(this).find('a').html("&#xe615;")
+            }
+        });
+        $('.nav li:last').hover(function() {
+            $(this).find('div').show();
+            $(this).find('dl').show();
+        }, function() {
+            $(this).find('div').hide();
+            $(this).find('dl').hide();
+        });
+        ////////
+        $('#totop').hide();
+        //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 100) {
+                $('.side_right').css('width', '166px');
+                $("#totop").fadeIn();
+            } else {
+                $("#totop").fadeOut();
+            }
+        });
+        //当点击跳转链接后，回到页面顶部位置
+        $("#totop").click(function() {
+            $('body,html').animate({
+                scrollTop : 0
+            }, 500);
+            return false;
+        });
+
+
+
+
+
+
+    </script>
+    <div style="display: none;">
+        <script type="text/javascript">
+            var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3fid%3d1256118936%26web_id%3d1256118936' type='text/javascript'%3E%3C/script%3E"));
+        </script><script src="/s95.cnzz.com/z_stat.php" type="text/javascript"></script><script src="/s95.cnzz.com/core.php" charset="utf-8" type="text/javascript"></script><a href="https://www.cnzz.com/stat/website.php?web_id=1256118936" target="_blank" title="站长统计">站长统计</a>
+    </div>
+    <script src="/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/js/common_base.js"></script></div>
+<script src="/js/entrance.js" class="zhiCustomBtn" id="zhichiScript" data-args="manual=true" charset="utf-8"></script>
+<script type="text/javascript">
+    $('#hh88').addClass("on");
+
+    $(document).ready(function(){
+        changeTitle("title4Personal");
+    });
+
+
+    function changeTitle(title){
+        $(".title4Ul").children().removeClass("on");
+        $("."+title).addClass("on");
+    }
+
+    var zhiManager = (getzhiSDKInstance());
+
+    zhiManager.set('customBtn', 'true');
+    zhiManager.set('customMargin', 120);
+
+    zhiManager.on("load", function() {
+        zhiManager.initBtnDOM();
+    });
+</script>
+
+<div id="calendar_1568199429124" class="ta_calendar ta_calendar2 cf" style="z-index: 9999; display: none;"><div class="ta_calendar_cont cf" id="dateRangePicker_1568199429124"><table class="dateRangeDateTable"><caption>2019年8月</caption><thead><tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr></thead><tbody><tr><td colspan="7" style="text-align: center;"><a href="javascript:void(0);" id="dateRangePreMonth_1568199429124"><i class="i_pre"></i></a></td></tr><tr><td class="ta_dateRangeGray">28</td><td class="ta_dateRangeGray">29</td><td class="ta_dateRangeGray">30</td><td class="ta_dateRangeGray">31</td><td id="calendar_1568199429124_2019-8-1" style="cursor: pointer;">1</td><td id="calendar_1568199429124_2019-8-2" style="cursor: pointer;">2</td><td id="calendar_1568199429124_2019-8-3" style="cursor: pointer;">3</td></tr><tr><td id="calendar_1568199429124_2019-8-4" style="cursor: pointer;">4</td><td id="calendar_1568199429124_2019-8-5" style="cursor: pointer;">5</td><td id="calendar_1568199429124_2019-8-6" style="cursor: pointer;">6</td><td id="calendar_1568199429124_2019-8-7" style="cursor: pointer;">7</td><td id="calendar_1568199429124_2019-8-8" style="cursor: pointer;">8</td><td id="calendar_1568199429124_2019-8-9" style="cursor: pointer;">9</td><td id="calendar_1568199429124_2019-8-10" style="cursor: pointer;">10</td></tr><tr><td id="calendar_1568199429124_2019-8-11" style="cursor: pointer;">11</td><td id="calendar_1568199429124_2019-8-12" style="cursor: pointer;">12</td><td id="calendar_1568199429124_2019-8-13" style="cursor: pointer;">13</td><td id="calendar_1568199429124_2019-8-14" style="cursor: pointer;">14</td><td id="calendar_1568199429124_2019-8-15" style="cursor: pointer;">15</td><td id="calendar_1568199429124_2019-8-16" style="cursor: pointer;">16</td><td id="calendar_1568199429124_2019-8-17" style="cursor: pointer;">17</td></tr><tr><td id="calendar_1568199429124_2019-8-18" style="cursor: pointer;">18</td><td id="calendar_1568199429124_2019-8-19" style="cursor: pointer;">19</td><td id="calendar_1568199429124_2019-8-20" style="cursor: pointer;">20</td><td id="calendar_1568199429124_2019-8-21" style="cursor: pointer;">21</td><td id="calendar_1568199429124_2019-8-22" style="cursor: pointer;">22</td><td id="calendar_1568199429124_2019-8-23" style="cursor: pointer;">23</td><td id="calendar_1568199429124_2019-8-24" style="cursor: pointer;">24</td></tr><tr><td id="calendar_1568199429124_2019-8-25" style="cursor: pointer;">25</td><td id="calendar_1568199429124_2019-8-26" style="cursor: pointer;">26</td><td id="calendar_1568199429124_2019-8-27" style="cursor: pointer;">27</td><td id="calendar_1568199429124_2019-8-28" style="cursor: pointer;">28</td><td id="calendar_1568199429124_2019-8-29" style="cursor: pointer;">29</td><td id="calendar_1568199429124_2019-8-30" style="cursor: pointer;">30</td><td id="calendar_1568199429124_2019-8-31" style="cursor: pointer;">31</td></tr></tbody></table><table class="dateRangeDateTable"><caption>2019年9月</caption><thead><tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr></thead><tbody><tr><td colspan="7" style="text-align: center;"><a href="javascript:void(0);" id="dateRangeNextMonth_1568199429124"><i class="i_next"></i></a></td></tr><tr><td id="calendar_1568199429124_2019-9-1" style="cursor: pointer;">1</td><td id="calendar_1568199429124_2019-9-2" style="cursor: pointer;">2</td><td id="calendar_1568199429124_2019-9-3" style="cursor: pointer;">3</td><td id="calendar_1568199429124_2019-9-4" style="cursor: pointer;">4</td><td id="calendar_1568199429124_2019-9-5" style="cursor: pointer;">5</td><td id="calendar_1568199429124_2019-9-6" style="cursor: pointer;">6</td><td id="calendar_1568199429124_2019-9-7" style="cursor: pointer;">7</td></tr><tr><td id="calendar_1568199429124_2019-9-8" style="cursor: pointer;">8</td><td id="calendar_1568199429124_2019-9-9" style="cursor: pointer;">9</td><td id="calendar_1568199429124_2019-9-10" style="cursor: pointer;">10</td><td class="today" id="calendar_1568199429124_2019-9-11" style="cursor: pointer;">11</td><td class="ta_dateRangeGray">12</td><td class="ta_dateRangeGray">13</td><td class="ta_dateRangeGray">14</td></tr><tr><td class="ta_dateRangeGray">15</td><td class="ta_dateRangeGray">16</td><td class="ta_dateRangeGray">17</td><td class="ta_dateRangeGray">18</td><td class="ta_dateRangeGray">19</td><td class="ta_dateRangeGray">20</td><td class="ta_dateRangeGray">21</td></tr><tr><td class="ta_dateRangeGray">22</td><td class="ta_dateRangeGray">23</td><td class="ta_dateRangeGray">24</td><td class="ta_dateRangeGray">25</td><td class="ta_dateRangeGray">26</td><td class="ta_dateRangeGray">27</td><td class="ta_dateRangeGray">28</td></tr><tr><td class="ta_dateRangeGray">29</td><td class="ta_dateRangeGray">30</td><td class="ta_dateRangeGray">1</td><td class="ta_dateRangeGray">2</td><td class="ta_dateRangeGray">3</td><td class="ta_dateRangeGray">4</td><td class="ta_dateRangeGray">5</td></tr></tbody></table></div><div class="ta_calendar_footer cf" style="display:none"><div class="frm_msg"><div id="dateRangeDiv_1568199429124"><input type="text" class="ta_ipt_text_s ta_dateRangeSelected" name="startDate_1568199429124" id="startDate_1568199429124" value="2019-09-11" readonly="" style="background-repeat: repeat;"><span class="joinLine"> - </span><input type="text" class="ta_ipt_text_s" name="endDate_1568199429124" id="endDate_1568199429124" value="2019-9-11" readonly=""><br></div><div id="dateRangeCompareDiv_1568199429124" style="display: none;"><input type="text" class="ta_ipt_text_s" name="startCompareDate_1568199429124" id="startCompareDate_1568199429124" value="" readonly="" disabled="disabled"><span class="joinLine"> - </span><input type="text" class="ta_ipt_text_s" name="endCompareDate_1568199429124" id="endCompareDate_1568199429124" value="" readonly="" disabled="disabled"></div></div><div class="frm_btn"><input class="ta_btn ta_btn_primary" type="button" name="submit_1568199429124" id="submit_1568199429124" value="确定"><input class="ta_btn" type="button" id="closeBtn_1568199429124" value="取消"></div></div></div><input type="hidden" id="startDate" name="startDate" value="2019-09-11"><input type="hidden" id="endDate" name="endDate" value="2019-9-11"><input type="checkbox" id="needCompare" name="needCompare" value="0" style="display:none;"><div id="zhichiBtnBox" style="position: fixed; z-index: 2147483583; box-shadow: rgba(15, 66, 76, 0.25) 0px 0px 14px 0px; width: 60px; height: 60px; border-radius: 50%; background-color: rgb(231, 83, 73); background-image: url(&quot;//www.sobot.com/chat/frame/imgs/icon.png&quot;); background-repeat: no-repeat; background-position: 18px -58px; right: 100px; bottom: 40px; display: none;"><a hidefocus="" id="zhichiBtn" style="position:relative;text-decoration: none; outline: none; font-family: Microsoft Yahei, Arial, Helvetica; color: #fff; font-size: 16px; display: inline-block; margin: 0; padding: 0; border: none; line-height:43px; float:none;width:100%;height:100%;border-radius:50%;"><span class="zc-advice-icon-btn-title" style="box-shadow: rgba(107, 113, 114, 0.15) 0px 2px 4px 0px; border: 1px solid rgb(235, 239, 240); font-family: &quot;Microsoft Yahei&quot;, Arial, Helvetica; color: rgb(85, 85, 86); font-size: 13px; margin: 0px; text-align: right; background: rgb(255, 255, 255); position: absolute; top: 15px; right: 70px; text-overflow: ellipsis; white-space: nowrap; word-break: normal; display: none; border-radius: 3px; padding: 0px 5px; height: 30px; line-height: 30px;">咨询在线客服</span></a><i style="position:absolute;top:0px;right:0px;padding:1px;line-height:20px;text-align:center;color:#fff;font-weight:bold;height:18px;min-width:18px;background-color:#ed5c5c;border-radius:18px;font-size:12px;display:none;font-style:normal;" id="zhichiCount"></i></div></body></html>
