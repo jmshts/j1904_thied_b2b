@@ -3,8 +3,10 @@ package com.sy.mapper;
 import com.sy.pojo.Quota;
 import com.sy.pojo.QuotaExample;
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+@Mapper
 public interface QuotaMapper {
     int countByExample(QuotaExample example);
 

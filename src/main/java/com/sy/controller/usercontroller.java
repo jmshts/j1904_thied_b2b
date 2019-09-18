@@ -65,9 +65,9 @@ public class UserController {
 
     /**
      * 登陆的验证，shiro处理。验证通过将本次登陆时间，登陆次数+1更新到数据库
-     * @param userp 登陆提交的信息（账号密码本次登录时间）
-     * @param attributes 放入账号的id
-     * @return 会员登陆后首页的跳转
+     * @param userp 登陆提交的信息（）
+     * @param attributes
+     * @return
      */
     @RequestMapping("/dealLogin")
     public String login(Userp userp, RedirectAttributes attributes){

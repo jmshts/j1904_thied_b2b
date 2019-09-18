@@ -1,0 +1,118 @@
+body{background:#f4f4f7;}
+input::-webkit-input-placeholder{column-rule: #A3A3A3;}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */ color:#A3A3A3;}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */color:#A3A3A3;}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ color:#A3A3A3;}
+.bank_open{background:#fff;margin:50px auto;}
+.bank_open .back_tit{height:78px;border-bottom:1px solid #ebebeb;line-height:78px;font-size: 16px;color: #FF8A10;text-align: center;margin-bottom: 39px;}
+.bank_open ul{width:580px;margin:0 auto;font-size:14px;}
+.bank_open ul li{margin-bottom: 15px;}
+.bank_open ul li .idCard{position: relative;}
+.bank_open ul li .idCard .ts{width:325px;height:33px;background: url(../images/18ts.png);position: absolute;right:-330px;top:7px;}
+.bank_open ul li input.dis{background-color: #f9f9f9!important;}
+.bank_open ul li .font{float:left;height:42px;line-height:42px;width:160px;color:#585858;font-size: 14px;text-align: right;}
+.bank_open ul li .ipt{float:left;height:40px;line-height:40px;margin-left: 20px;}
+.stock_user ul li .ipt{float:left;height:40px;line-height:40px;margin-left: 20px;padding-left: 10px;}
+.bank_open ul li .stock{margin-left: 25px;color: #585858;}
+.bank_open ul li .ipt input{border:1px solid #ebebeb;font-size:14px;height:40px;line-height:40px;width:358px;padding:0 10px;border-radius: 3px;}
+.bank_open ul li .ipt input.border-none{border:none}
+.bank_open ul li .ipt.yzm_code input{width:220px;}
+.bank_open ul li .ipt select{border:1px solid #ddd;font-size:14px;height:40px;width:380px;padding:0 10px;border-radius: 3px;outline: 0}
+.bank_open ul li .msg{float:left;width:120px;height:40px;cursor:pointer;margin-left: 18px;}
+.bank_open ul li div.msg input{background:#ff8a10;width:100%;height:100%;color:#fff;border-radius: 3px}
+.bank_open ul li div.msg input:hover{background:#ff711c;}
+.bank_open ul li div.msg input.dis_btn{background:#ccc;}
+.bank_open ul li div.sel_bank{position: relative;z-index: 10;width: 380px;float: left;margin-left: 20px;}
+.bank_open ul li div.sel_bank .bank_detail{font-size: 14px;color: #a3a3a3;}
+
+.bank_open ul li div.sel_bank .ipt_bank_select{width: 378px;height: 40px;line-height: 40px;border:1px solid #ddd;border-radius: 3px}
+.bank_open ul li div.sel_bank .change{border: none;}
+.bank_open ul li div.sel_bank .ipt_bank_select input{width: 290px;float: left;height: 40px;padding-left: 10px}
+.bank_open ul li div.sel_bank .ipt_bank_select div.iconfont{width: 78px;float: left;text-align: right;font-size: 24px;color: #a3a3a3}
+.bank_open ul li div.sel_bank .ipt_bank_select .cardType{background: #FDF3E6;overflow: hidden;border-radius: 4px;box-sizing:border-box;-moz-box-sizing:border-box;position: absolute;border: 1px solid #ddd;width: 100%;left: 0px;top: 41px;z-index: 10;}
+.bank_open ul li div.sel_bank .ipt_bank_select .cardType p{padding: 0 10px;height: 44px;line-height: 44px;cursor: pointer; color: #585858;font-size: 14px;border-bottom: 1px solid #ddd;}
+.bank_open ul li div.sel_bank .div_bank_select{width: 378px;height: 40px;line-height: 40px;border:1px solid #ddd;border-radius: 3px}
+.bank_open ul li div.sel_bank .div_bank_select div{width: 290px;float: left;height: 40px;padding-left: 10px}
+.bank_open ul li div.sel_bank .div_bank_select span{width: 78px;float: left;text-align: right;font-size: 24px;color: #a3a3a3}
+
+.bank_open ul li div.sub input{font-size:14px;height:42px;line-height:42px;width:258px;cursor: pointer; background:#BEBEBE;color:#fff;border-radius:3px;text-align:center;margin-left: 180px;margin-top: 20px}
+/* .bank_open ul li div.sub input:hover{background:#ff711c;} */
+
+.bank_open .expl{height:140px;border-top: 1px solid #ebebeb;margin-top: 40px;}
+.bank_open .expl ol{margin-top: 35px;margin-left: 300px;font-size: 14px;color: #a3a3a3;}
+
+.open_account{width: 443px!important;height: auto;border-top: 4px solid #ff8a10;}
+.open_account .success i.iconfont{font-size: 60px;color: #e67c0e;margin-top: 35px;display: block;}
+.open_account .success p{font-size: 16px;}
+.open_account .success input{width:260px;height:37px;background: #ff8a10;font-size: 14px;color: #fff;border-radius: 3px;margin: 25px 0 30px 0;}
+.open_account .success{width: 443px;text-align: center}
+
+.open_account .error{text-align: center;}
+.open_account .error .t{border-bottom: 1px solid #f1f1f1;height: 75px;line-height: 75px}
+.open_account .error ul{text-align: left;margin-top: 25px;margin-left: 30px;}
+.open_account .error ul li{font-size: 14px;color: #a3a3a3;}
+.open_account .error input{width:260px;height:37px;background: #ff8a10;font-size: 14px;color: #fff;border-radius: 3px;margin: 25px 0 30px 0;}
+
+#Bank{position: absolute;border:1px solid #ddd;width: 100%;height: 300px;overflow: auto;left:-1px;top:41px;z-index: 8;}
+
+
+#Bank dd{height: 42px;background: #fff;border-bottom: 1px solid #ddd;color: #585858}
+#Bank_sel_hid i{margin-right: 10px}
+#Bank dd i{margin:0 10px}
+#Bank dd b{font-weight: normal;color: #a3a3a3;font-size: 12px}
+
+
+
+/******************BANK*******************/
+.Bank{background: url(../images3.1/uc/bank.png);width: 58px;display:inline-block;height: 42px;background-position: -320px -630px;vertical-align: middle;}
+
+/*农业银行*/
+.ABOC{background-position: -502px -2px;width:25px;}
+/*中国银行*/
+.BKCH{background-position: -356px -1px;width:26px;}
+/*中信银行*/
+.CIBK{background-position: -37px -92px;width:21px;}
+/*光大银行*/
+.EVER{background-position: -500px -92px;width:46px;}
+/*招商银行*/
+.CMBC{background-position: -353px -47px;width:23px;}
+/*江苏银行*/
+.BOJS{background-position: -354px -227px;width:27px;}
+
+/*兴业银行*/
+.FJIB{background-position: -193px -92px;width:29px;}
+/*广发银行*/
+.GDBK{background-position: -24px -182px;width:22px;}
+/*华夏银行*/
+.HXBK{background-position: -194px -137px;width:23px;}
+/*中国工商银行*/
+.ICBK{background-position: -25px -1px;width: 22px;}
+/*广州银行*/
+.GZCB{background-position: -506px -720px;width: 30px;}
+/*恒丰银行*/
+.HFBA{background-position: -347px -272px;width:22px;}
+
+
+/*民生银行*/
+.MSBC{background-position: -341px -92px;width:25px;}
+/*建设银行*/
+.PCBC{background-position: -183px -1px;width:24px;}
+/*中国邮政*/
+.PSBC{background-position: -192px -46px;width:25px;}
+/*平安银行*/
+.SZDB{background-position: -25px -137px;width:39px;}
+/*杭州银行*/
+.HZCB{background-position: -505px -272px;width:35px;}
+/*浙商银行*/
+.ZJCB{background-position: -184px -721px;width: 30px}
+
+/*浦发银行*/
+.SPDB{background-position: -517px -47px;width:29px;}
+/*北京银行*/
+.BJCN{background-position: -351px -137px;width:22px;}
+/*上海银行*/
+.BOSH{background-position: -516px -182px;width:26px;}
+/*交通银行*/
+.COMM{background-position: -27px -46px;width:23px;}
+/*宁波银行*/
+.BKNB{background-position: -38px -227px;width:25px;}

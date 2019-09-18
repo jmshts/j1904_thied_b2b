@@ -3,8 +3,10 @@ package com.sy.mapper;
 import com.sy.pojo.Loantype;
 import com.sy.pojo.LoantypeExample;
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+@Mapper
 public interface LoantypeMapper {
     int countByExample(LoantypeExample example);
 
