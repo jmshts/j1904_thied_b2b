@@ -2,36 +2,31 @@ package com.sy.mapper;
 
 import com.sy.pojo.Permission;
 import com.sy.pojo.PermissionExample;
-import com.sy.pojo.PermissionWithBLOBs;
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+@Mapper
 public interface PermissionMapper {
     int countByExample(PermissionExample example);
 
     int deleteByExample(PermissionExample example);
 
-    int deleteByPrimaryKey(Integer id);
+    int deleteByPrimaryKey(Integer permissionid);
 
-    int insert(PermissionWithBLOBs record);
+    int insert(Permission record);
 
-    int insertSelective(PermissionWithBLOBs record);
-
-    List<PermissionWithBLOBs> selectByExampleWithBLOBs(PermissionExample example);
+    int insertSelective(Permission record);
 
     List<Permission> selectByExample(PermissionExample example);
 
-    PermissionWithBLOBs selectByPrimaryKey(Integer id);
+    Permission selectByPrimaryKey(Integer permissionid);
 
-    int updateByExampleSelective(@Param("record") PermissionWithBLOBs record, @Param("example") PermissionExample example);
-
-    int updateByExampleWithBLOBs(@Param("record") PermissionWithBLOBs record, @Param("example") PermissionExample example);
+    int updateByExampleSelective(@Param("record") Permission record, @Param("example") PermissionExample example);
 
     int updateByExample(@Param("record") Permission record, @Param("example") PermissionExample example);
 
-    int updateByPrimaryKeySelective(PermissionWithBLOBs record);
-
-    int updateByPrimaryKeyWithBLOBs(PermissionWithBLOBs record);
+    int updateByPrimaryKeySelective(Permission record);
 
     int updateByPrimaryKey(Permission record);
 }

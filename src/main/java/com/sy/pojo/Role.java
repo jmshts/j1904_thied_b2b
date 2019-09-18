@@ -3,12 +3,13 @@ package com.sy.pojo;
 import java.io.Serializable;
 
 public class Role implements Serializable {
+    //角色id
     private Integer roleid;
-
+//角色类型
     private String roletype;
-
+//角色等级
     private Integer rolelevel;
-
+//角色名称
     private String rolename;
 
     private static final long serialVersionUID = 1L;

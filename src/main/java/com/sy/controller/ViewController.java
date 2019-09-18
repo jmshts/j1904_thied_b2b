@@ -1,14 +1,21 @@
 package com.sy.controller;
 
+import com.sy.pojo.Userp;
+import com.sy.service.UsersService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Create By SHI_YAO On 2019/9/9
  */
 @Controller
 public class ViewController {
+
+    @Autowired
+    private UsersService usersService;
     /**
      * 未登录的首页
      * @return
@@ -37,11 +44,17 @@ public class ViewController {
     }
 
     /**
-     * 跳转到登录后的首页
-     * @return
+     * 会员注册成功或登陆成功展示的主页面
+     * @param uid 当前账户id
+     * @param model 账户信息存入session
+     * @return 主页面
      */
-    @RequestMapping("main")
-    public String main(){ return "main";}
+    @RequestMapping("/user/main")
+    public String main(@RequestParam(value = "uid")Integer uid, Model model){
+        Userp userp = usersService.findById(uid);
+        model.addAttribute("user",userp);
+        return "main";
+    }
 
     /**
      * 跳转到散标区的界面

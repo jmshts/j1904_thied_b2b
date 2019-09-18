@@ -62,7 +62,7 @@
                             content += '<li><a href="/uc">' + indexname + '</a><a href="javascript:;" id="exit">退出</a></li>';
                         }
                     }else{
-                        content += '<li><a href="/login">登录</a>|</li><li><a href="/register?source=tdgw">注册</a>|</li>';
+                        content += '<li><a href="/login">登录</a>|</li><li><a href="/register">注册</a>|</li>';
                     }
                     $("#top_userinfo").append(content);
                 </script>
@@ -158,21 +158,29 @@
             return arr;
         }
     </script></div>
-
+<script type="text/javascript">
+    $(function () {
+        $("#submitBtn").click(function () {
+            var t = new Date();
+            $("#lastlogintime").val(t);
+            $("#loginform").submit();
+        })
+    })
+</script>
 
 <div class="w1100 login clear">
     <div class="left">
     </div>
     <div class="right">
         <p class="t">登录</p>
-        <form class="clear" action="/main">
+        <form id="loginform" class="clear" action="/user/dealLogin" method="post">
+            <input type="hidden" name="lastlogintime" id="lastlogintime">
             <ul class="clear">
-                <li class="text clear"><input type="text" id="userName" name="userName" tabindex="1" maxlength="20" placeholder="请输入用户名或手机号码"></li>
+                <li class="text clear"><input type="text" id="userName" name="uname" tabindex="1" maxlength="20" placeholder="请输入用户名或手机号码"></li>
                 <li class="text clear"><input type="password" id="password" name="password" tabindex="2" maxlength="20" placeholder="请输入密码"></li>
-                <li class="yzm clear" style="display: none"><input type="text" id="verificationCode"  name="verificationCode" maxlength="4" tabindex="3" placeholder="请输入图片验证码" class="fl"><div class="yzm_img"><img class="verImg" id="validImg" src="/images/authImage?w=120&h=38" title="看不清，换一张" style="cursor: pointer;"/></div></li>
                 <li class="clear"><div class="rember_me"><input type="checkbox" id="rm" tabindex="4"><label for="rm">记住我</label></div><div class="forget"><a href="/front/getPwd">忘记密码</a></div></li>
-                <li class="clear"><input type="submit" id="submitBtn" value="登录" class="sub"></li>
-                <li class="clear join_td">还没有加入拓道金服？<a href="/register?source=tdgw&sourceType=1">免费注册</a></li>
+                <li class="clear"><input type="button" id="submitBtn" value="登录" class="sub"></li>
+                <li class="clear join_td">还没有加入拓道金服？<a href="/register">免费注册</a></li>
             </ul>
         </form>
     </div>

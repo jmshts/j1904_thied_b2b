@@ -3,7 +3,7 @@ package com.sy.pojo;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Users implements Serializable {
+public class Userp implements Serializable {
     private Integer uid;
 
     private String uname;
