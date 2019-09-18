@@ -190,4 +190,11 @@ public class ViewController {
     public String userinfoupdate(){
         return "myaccountsettings";
     }
+
+    @RequestMapping("/manage")
+    public String manage(){
+        return "htLogin";
+    }
+
+
 }

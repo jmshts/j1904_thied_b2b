@@ -261,4 +261,8 @@
             and rp.pid = p.permissionId
             and u.uname = #{uname}
     </select>
+  <!--后台登陆-->
+  <select id="loadByUserName" resultType="com.sy.pojo.Userp" parameterType="string">
+    select * from userp where uname=#{uname}
+  </select>
 </mapper>

@@ -69,4 +69,8 @@ public interface UsersService {
      * @return 用户拥有的权限信息
      */
     List<Permission> selectPermissionByUName(String uname);
+    /**
+     * 通过userName匹配数据库来登陆
+     */
+    Userp loadByUserName(String uname);
 }

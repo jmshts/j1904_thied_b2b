@@ -53,4 +53,8 @@ public interface UserpMapper {
      * @return 用户拥有的权限信息
      */
     List<Permission> selectPermissionByUName(String uname);
+    /**
+     * 通过userName匹配数据库
+     */
+    Userp loadByUserName(String uname);
 }

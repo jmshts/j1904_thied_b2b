@@ -126,4 +126,12 @@ public class UsersServiceImpl implements UsersService {
         List<Permission> permissions = userMapper.selectPermissionByUName(uname);
         return permissions;
     }
+
+    @Override
+    public Userp loadByUserName(String uname) {
+        Userp userp = userMapper.loadByUserName(uname);
+        return userp;
+    }
+
+
 }
